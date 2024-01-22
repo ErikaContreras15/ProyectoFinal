@@ -1,5 +1,5 @@
 
-export class Producto{
+export class producto{
 
     idProducto: number=0;
     descripcion:string ='';

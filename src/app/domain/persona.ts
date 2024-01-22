@@ -1,5 +1,5 @@
 
-import { Producto } from "./Producto";
+import { producto } from "./producto";
 export class Persona{
 
     apellido:string='';

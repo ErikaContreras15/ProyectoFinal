@@ -1,0 +1,26 @@
+.container{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50% 50%;
+}
+
+.izq{
+  
+
+  text-align: justify;
+  margin-bottom: 5px;
+  padding: 50px;
+}
+
+.der img{
+  width: 100%;
+}
+
+.der{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}

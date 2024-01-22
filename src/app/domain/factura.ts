@@ -1,5 +1,5 @@
 
-import { Carrito_Compras } from "./Carrito_Compras";
+import { carritoCompras } from "./carritoCompras";
 export class Factura{
 
     idFactura: number=0;
@@ -7,5 +7,6 @@ export class Factura{
     fecha:Date | undefined;
     total: number=0.0;
 
-    Carrito_Compras:Carrito_Compras = new Carrito_Compras();
+    
+    carritoCompras:carritoCompras = new carritoCompras();
 }

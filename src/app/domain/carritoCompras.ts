@@ -1,14 +1,14 @@
 
-import { Ofertas } from "./Ofertas";
-import { Producto } from "./Producto";
+import { Ofertas } from "./ofertas";
+import { producto } from "./producto";
 
-export class Carrito_Compras{
+export class carritoCompras{
 
     idCarrito_Compras: number=0;
     codigo:string='';
     fecha_Creacion:Date | undefined;
     estado:string='';
 
-    producto!:Producto;
+    producto!:producto;
     ofertas!:Ofertas;
 }
