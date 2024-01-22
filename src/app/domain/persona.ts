@@ -1,3 +1,5 @@
+
+import { Producto } from "./Producto";
 export class Persona{
 
     apellido:string='';
@@ -6,3 +8,4 @@ export class Persona{
     correo:string='';
     
 }
+
