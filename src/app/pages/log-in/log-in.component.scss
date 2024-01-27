@@ -5,22 +5,128 @@
 }
 
 .izq{
-  
-
-  text-align: justify;
-  margin-bottom: 5px;
-  padding: 50px;
-}
-
-.der img{
-  width: 100%;
-}
-
-.der{
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+.izq img{
+  width: 100%;  
+}
+
+.der{
+  text-align: justify;
+}
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #ecf0f1;
+$form-background: #ffffff;
+$form-border: 1px solid #bdc3c7;
+$form-padding: 20px;
+$input-padding: 10px;
+$button-background: $secondary-color;
+$button-color: #ffffff;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: $form-background;
+  border: $form-border;
+  padding: $form-padding;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: $input-padding;
+    margin-bottom: 15px;
+    border: $form-border;
+    border-radius: 3px;
+  }
+
+  button {
+    background-color: $button-background;
+    color: $button-color;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+// Footer
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+  .footer-column {
+    flex: 1;
+    margin-right: 20px;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 5px 0;
+      }
+    }
+
+    .social-icons {
+      img {
+        width: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .slogan {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 16px;
+  }
 }
