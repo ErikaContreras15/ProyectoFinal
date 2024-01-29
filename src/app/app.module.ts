@@ -10,7 +10,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
   declarations: [
     AppComponent,
     LogInComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
