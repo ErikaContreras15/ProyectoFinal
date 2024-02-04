@@ -1,84 +1,44 @@
 .header-container {
-  background-color: #000000; color: white; display: flex; justify-content: space-between; padding: 0.1px;
-  .column {flex: 1; text-align: center;} 
+  background-color: #333; /* Fondo oscuro, puedes cambiar el color según tus preferencias */
+  color: white; /* Texto blanco */
+  display: flex;
+  justify-content: space-between; /* Divide en 3 columnas */
+  padding: 10px; /* Añade algún espaciado para mejorar el diseño */
+  
+  .column {
+    flex: 1; /* Cada columna ocupa la misma cantidad de espacio */
+    text-align: center; /* Centra el texto en cada columna */
+  }
 }
 
-
-
-.logo-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #9b9b9b; /* Fondo oscuro, puedes cambiar el color según tus preferencias */
+.encabezado-dos {
+  background-color: #bebebe; /* Fondo oscuro, puedes cambiar el color según tus preferencias */
   color: white; /* Texto blanco */
+  display: flex;
+  justify-content: space-between; /* Divide en 3 columnas */
   padding: 10px; /* Añade algún espaciado para mejorar el diseño */
-
+  
   .column {
-    flex: 1;
-    display: flex;
-    align-items: center;
+    flex: 1; /* Cada columna ocupa la misma cantidad de espacio */
+    text-align: center; /* Centra el texto en cada columna */
 
-    img {
-      max-width: 15%;
-      height: auto;
-    }
 
     .icon-button {
-      //background-color: transparent;
-      //width: 90px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
       img {
-        width: 130px; /* Ajusta el tamaño del icono según sea necesario */
+        width: 30px; /* Ajusta el tamaño del icono según sea necesario */
         height: 30px; /* Ajusta el tamaño del icono según sea necesario */
         margin-right: 5px; /* Espaciado entre los iconos, ajusta según sea necesario */
       }
     }
-
-
-  }
-
-  .search-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 300px;
-
-    input {
-      width: 70%;
-      padding: 5px;
-      box-sizing: border-box;
-    }
-
-    .small-button {
-      width: 25%;
-      padding: 5px;
-      box-sizing: border-box;
-    }
-
-    .tabs {
-      display: flex;
-      margin-top: 10px;
-
-      span {
-        flex: 1;
-        text-align: center;
-        border: 1px solid #fff; /* Ajusta según sea necesario */
-        padding: 5px;
-        cursor: pointer;
-
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-
-  .column:last-child {
-    margin-left: 10px; /* Ajusta el margen según sea necesario */
   }
 }
-
-
-
 
 
 
