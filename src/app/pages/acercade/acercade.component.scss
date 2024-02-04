@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333; /* Fondo oscuro, puedes cambiar el color según tus preferencias */
+  background-color: #9b9b9b; /* Fondo oscuro, puedes cambiar el color según tus preferencias */
   color: white; /* Texto blanco */
   padding: 10px; /* Añade algún espaciado para mejorar el diseño */
 
@@ -19,16 +19,17 @@
     align-items: center;
 
     img {
-      max-width: 100%;
+      max-width: 15%;
       height: auto;
     }
+
   }
 
   .search-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 300px; /* Ajusta según sea necesario */
+    max-width: 300px;
 
     input {
       width: 70%;
