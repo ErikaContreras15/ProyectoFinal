@@ -1,3 +1,75 @@
+.header-container {
+  background-color: #000000; color: white; display: flex; justify-content: space-between; padding: 0.1px;
+  .column {flex: 1; text-align: center;} 
+}
+
+
+
+.logo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Fondo oscuro, puedes cambiar el color según tus preferencias */
+  color: white; /* Texto blanco */
+  padding: 10px; /* Añade algún espaciado para mejorar el diseño */
+
+  .column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .search-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px; /* Ajusta según sea necesario */
+
+    input {
+      width: 70%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .small-button {
+      width: 25%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .tabs {
+      display: flex;
+      margin-top: 10px;
+
+      span {
+        flex: 1;
+        text-align: center;
+        border: 1px solid #fff; /* Ajusta según sea necesario */
+        padding: 5px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .column:last-child {
+    margin-left: 10px; /* Ajusta el margen según sea necesario */
+  }
+}
+
+
+
+
+
+
 //-------------------------------------------------Footer------------------------------------------------
 .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;
     .footer-column {font-family: Arial, sans-serif;flex: 1;margin-right: 20px;text-align: justify;
