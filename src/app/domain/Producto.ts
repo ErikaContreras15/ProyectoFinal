@@ -1,4 +1,6 @@
 
+import { Ofertas } from "./Ofertas";
+
 export class producto{
 
     idProducto: number=0;
@@ -9,6 +11,8 @@ export class producto{
     talla:string='';
     color:string='';
     precio:number=0.0;
+
+    ofertas!:Ofertas;
 
 }
 

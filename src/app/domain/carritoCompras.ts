@@ -1,6 +1,4 @@
 
-import { Ofertas } from "./ofertas";
-import { producto } from "./producto";
 
 export class carritoCompras{
 
@@ -9,6 +7,4 @@ export class carritoCompras{
     fecha_Creacion:Date | undefined;
     estado:string='';
 
-    producto!:producto;
-    ofertas!:Ofertas;
 }
