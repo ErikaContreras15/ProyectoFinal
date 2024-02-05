@@ -1,3 +1,6 @@
+
+
+//-----------------------------CARRUSEL-------------
 @mixin transition($transition) {
   -moz-transition:    $transition;
   -o-transition:      $transition;
@@ -120,29 +123,37 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   h2 {
-      color: #333;
+    color: #333;
   }
 
   .category-row {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   .category-option {
-      background-color: #ccc;
-      border: 2px solid #007bff;
-      border-radius: 8px;
-      padding: 20px;
-      width: 20%; /* Ajusta según sea necesario */
-      margin: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    background-color: #ccc;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 20%;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
-      &:hover {
-          background-color: #00ced1; /* Turquesa */
-      }
+    &:hover {
+      background-color: #00ced1;
+    }
+
+    // Estilos para las imágenes cuadradas
+    img {
+      width: 100%;
+      border: 2px solid #007bff; // Añade un borde cuadrado
+      object-fit: cover;
+    }
   }
 }
+
 
 //-------------------------------------------------PARA QUIEN COMPRAS------------------------------------------------
 
@@ -154,41 +165,44 @@ body {
   text-align: center;
 }
 
-.container {
+.categories {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 30px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-h2 {
-  color: #333;
-}
+  h2 {
+    color: #333;
+  }
 
-.options {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
+  .category-row {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.logo-container {
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
+  .category-option {
+    background-color: #ccc;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 20%;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
-.logo-container img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+    &:hover {
+      background-color: #00ced1;
+    }
 
-.logo-text {
-  color: #333;
+    // Estilos para las imágenes cuadradas
+    img {
+      width: 100%;
+      border: 2px solid #007bff; // Añade un borde cuadrado
+      object-fit: cover;
+    }
+  }
 }
 
 
