@@ -10,6 +10,7 @@ import { FacturaComponent } from './pages/factura/factura.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AcercadeComponent } from './pages/acercade/acercade.component';
     InicioComponent,
     FacturaComponent,
     AcercadeComponent,
+    HomeComponent,
 
   ],
   imports: [

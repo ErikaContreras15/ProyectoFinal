@@ -9,12 +9,8 @@ import { Router } from '@angular/router';
 export class LogInComponent {
   constructor(private router: Router) {}
 
-  irACrearCuenta() {
-    this.router.navigate(['/paginas/SignUp'], { replaceUrl: true });
-  }
-
-  iniciarSesion() {
-    this.router.navigate(['/paginas/SignUp'], { replaceUrl: true });
+  irAHome() {
+    this.router.navigate(['paginas/home'], { replaceUrl: true });
   }
 }
 
