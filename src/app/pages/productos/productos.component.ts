@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class ProductosComponent {
 
 }
+
+function moveImage(element: HTMLElement) {
+  element.style.transform = 'translateY(-10px)';
+  setTimeout(() => {
+    element.style.transform = 'translateY(0)';
+  }, 300);
+}
+
+
+
