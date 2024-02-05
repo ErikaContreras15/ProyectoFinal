@@ -39,6 +39,17 @@
   }
 }
 
+//-------------------------------------------------BODY------------------------------------------------
+.cuerpo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  .column {text-align: center;
+    img {width: 350px;}
+  }
+}
+
 //-------------------------------------------------Footer------------------------------------------------
 .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;
     .footer-column {font-family: Arial, sans-serif;flex: 1;margin-right: 20px;text-align: justify;

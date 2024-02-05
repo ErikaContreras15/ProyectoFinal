@@ -6,6 +6,8 @@ import { FacturaComponent } from './pages/factura/factura.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
+import { MenuComponent } from './template/menu/menu.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
@@ -15,9 +17,8 @@ const routes: Routes = [
   {path: 'paginas/Factura', component: FacturaComponent},
   {path: 'paginas/productos', component: ProductosComponent},
   {path: 'paginas/acercade', component: AcercadeComponent},
-  
-
-  
+  {path: 'paginas/menu', component: MenuComponent},
+  {path: 'paginas/home', component: HomeComponent},
 ];
 
 @NgModule({

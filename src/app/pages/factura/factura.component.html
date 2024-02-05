@@ -1,1 +1,100 @@
-<p>factura works!</p>
+<!--------------------------------------ENCABEZADO-------------------------------------->
+<div class="header-container">
+  <div class="column"><p>Envíos Gratis!</p></div>
+  <div class="column"><p>Hasta el 40% OFF | Black January</p></div>
+  <div class="column"><p>IMPORTANTE</p></div>
+</div>
+<div class="seccion-tres-columnas">
+  <div class="column"><img src="assets/icons/stole.jpg" alt="Logo de la tienda" class="logo-img"></div>
+  <div class="column">
+    <input type="text" placeholder="Buscar">
+    <button class="search-button"><img src="assets/icons/search.jpg" alt="Perfil" class="search-img"></button>
+    <div class="tabs">
+      <span><a href="paginas/home">INICIO</a></span>
+      <span><a href="paginas/Factura">TIENDA</a></span>
+    </div>
+  </div>
+  <div class="column">
+    <button><img src="assets/icons/user.jpg" alt="Perfil"></button>
+    <button><img src="assets/icons/heart.jpg" alt="Perfil"></button>
+    <button><img src="assets/icons/carrito.jpg" alt="Perfil"></button>
+  </div>
+</div>
+
+<!--------------------------------------BODY-------------------------------------->
+<div class="compra-container">
+    <div class="column">
+      <h3>Detalles del Pago</h3>
+      <label for="metodoPago">Método de Pago:</label>
+      <select id="metodoPago" name="metodoPago">
+        <option value="visa">-Elija su opcion de pago-</option>
+        <option value="visa">VISA</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="paypal">PayPal</option>
+        <option value="visa">Debito</option>
+      </select>
+      <label for="numeroTarjeta">Número de Tarjeta:</label>
+      <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+      <label for="fechaVencimiento">Fecha de Vencimiento:</label>
+      <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/YY" required>
+      <label for="cvv">CVV/CVC:</label>
+      <input type="text" id="cvv" name="cvv" required>
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula" name="cedula" required>
+    </div>
+    <div class="column">
+      <h3>Resumen de Compra</h3>
+      <p>Subtotal: $100.00</p>
+      <p>IVA (16%): $16.00</p>
+      <p>Total: $116.00</p>
+    </div>
+  </div>
+  <div class="terminos-container">
+    <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" required>
+    <label for="aceptoTerminos">Acepto los términos y condiciones</label>
+  </div>
+  <div class="botones-container">
+    <button class="confirmar-pago">Confirmar Pago</button>
+    <button class="regresar">Regresar</button>
+  </div>
+
+<!--------------------------------------FOOTER-------------------------------------->
+<footer class="footer">
+  <div class="footer-column">
+    <h3>CONTACTO</h3>
+    <p>🎧 Atención al cliente 24/7: (+593)987654321</p>
+    <p>Stole es una tienda de ropa online que ofrece una seleccion unica de prendas modernas y elegantes. Con un enfoque en la calidad, moda y comodidad, Stole brinda a sus clientes una experiencia de compra conveniente y estilixada, con envios rápidos y atencion personalizada</p>
+    <div class="social-icons">
+      <img src="assets/icons/facebook.jpg" alt="facebook" >
+      <img src="assets/icons/instagram.jpg" alt="instagram">
+      <img src="assets/icons/youtube.jpg" alt="youtube">
+      <img src="assets/icons/whatsapp.jpg" alt="whatsapp">
+      <img src="assets/icons/tik-tok.jpg" alt="tiktok">
+      <img src="assets/icons/gorjeo.jpg" alt="twitter">
+    </div>
+  </div>
+  <div class="footer-column">
+    <div class="footer-center">
+      <h3>PREGUNTAS FRECUENTES</h3>
+      <ul>
+        <li><u>¿Qué es STOLE?</u></li>
+        <li><u>Centro de ayuda en linea</u></li>
+        <li><u>Política de devolucion de productos</u></li>
+        <li><u>Términos y condiciones</u></li>
+        <li><u>Trabaja con nosotros</u></li>
+        <li><u>Propiedad intelectual</u></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-column">
+    <div class="footer-end">
+      <h3>MÉTODOS DE PAGO</h3>
+      <div class="social-icons">
+        <img src="assets/icons/visa.jpg" alt="Visa" >
+        <img src="assets/icons/paypal.jpg" alt="Paypal" >
+        <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
+      </div>
+    </div>
+  </div>
+  <p class="slogan">® 2014 - 2029 - Stole - Todos los derechos reservados - Todas las marcas son propiedad de sus respectivos dueños </p>
+</footer>
