@@ -5,14 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
-
 import { ProductosComponent } from './pages/productos/productos.component';
-
 import { FacturaComponent } from './pages/factura/factura.component';
-
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './template/menu/menu.component';
-
+import { AcercadeComponent } from './pages/acercade/acercade.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +17,10 @@ import { MenuComponent } from './template/menu/menu.component';
     AppComponent,
     LogInComponent,
     SignUpComponent,
-
-  
     ProductosComponent,
-        InicioComponent,
-        FacturaComponent,
+    InicioComponent,
+    FacturaComponent,
+    AcercadeComponent,
 
   ],
   imports: [

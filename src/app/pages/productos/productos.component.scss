@@ -1,3 +1,108 @@
+@mixin transition($transition) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+#carrousel {
+  margin: 10px;
+
+  // Estilos responsivos
+  @media (max-width: 768px){
+    margin: 70px 0px 0px 0px;
+  }
+  @media (max-width: 425px){
+    margin: 50px 0px 0px 0px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .owl-carousel {
+    // Estilos para las imágenes dentro del carrusel
+    img {
+      // ...
+
+      // Efecto de sombra
+      -webkit-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+      box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+
+      // Transición
+      @include transition(all 0.2s ease);
+    }
+
+    // Estilos para los elementos del carrusel
+    .owl-item {
+      height: 300px;
+      position: relative;
+      transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transition: all 0.2s;
+      -webkit-transform: all 0.2s;
+      z-index: 1;
+
+      // Estilos responsivos
+      @media (max-width: 768px){
+        height: 270px;
+      }
+      @media (max-width: 380px){
+        height: 200px;
+      }
+    }
+
+    .owl-stage-outer {
+      padding-bottom: 10px;
+    }
+  }
+
+  // Estilos para elementos específicos dentro del carrusel
+  .owl-item {
+    &.big {
+      // ...
+    }
+
+    &.medium {
+      // ...
+
+      &.mdright, &.mdleft {
+        // ...
+      }
+    }
+
+    &.smallRight {
+      &.active {
+        // ...
+      }
+    }
+
+    &.smallLeft {
+      &.active {
+        // ...
+      }
+    }
+  }
+
+  // Estilos para la navegación del carrusel
+  .owl-nav {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+
+    .owl-prev, .owl-next {
+      // ...
+    }
+  }
+}
+
+
+
+
+//--------------------------------------CATEGORIAS-------------------------------------->
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
