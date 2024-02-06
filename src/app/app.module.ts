@@ -12,6 +12,7 @@ import { MenuComponent } from './template/menu/menu.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { HomeComponent } from './pages/home/home.component';
 
+
 @NgModule({
   declarations: [
     MenuComponent,
@@ -23,6 +24,7 @@ import { HomeComponent } from './pages/home/home.component';
     FacturaComponent,
     AcercadeComponent,
     HomeComponent,
+
 
   ],
   imports: [

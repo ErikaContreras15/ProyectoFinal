@@ -18,40 +18,15 @@
   </div>
 </div>
 
-<!--------------------------------------BODY-------------------------------------->
-<body>
-    <div class="container">
-      <h1>Stole</h1>
-      <div class="options">
-        <!-- ... tus opciones de productos aquí ... -->
-      </div>
-  
-      <!-- Agrega la clase 'productos-page' al contenedor específico de la página de productos -->
-      <div class="productos-page">
-        <div id="carrousel">
-          <div class="container">
-            <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
-            <div class="col-md-12">
-              <div class="owl-carousel owl-theme">
-                <img src="https://picsum.photos/300/300/?random&1">
-                <img src="https://picsum.photos/300/300/?random&2">
-                <img src="https://picsum.photos/300/300/?random&3">
-                <img src="https://picsum.photos/300/300/?random&4">
-                <img src="https://picsum.photos/300/300/?random&5">
-                <img src="https://picsum.photos/300/300/?random&6">
-                <img src="https://picsum.photos/300/300/?rando&7">
-                <img src="https://picsum.photos/300/300/?random&8">
-              </div>
-            </div>
-            <div class="text-center">
-              <button id="play-carousel" type="button" class="btn btn-dark">Play</button>
-              <div class="status"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+<!--------------------------------------BODY CARRUSEL------------------------------------->
+
+
+
+
+
+
+
+
   <!--------------------------------------CATEGORIAS-------------------------------------->
   <body>
       <div class="categories">
@@ -69,55 +44,64 @@
   </body>
   
     <!--------------------------------------PARA QUIEN COMPRAS-------------------------------------->
-  
-    <body>
-      <div class="container">
-        <h2>PARA QUIEN COMPRAS</h2>
-        <div class="options">
-          <div class="logo-container">
-            <img src="assets/icons/hombre-image.PNG" alt="Hombre">
-            <div class="logo-text">HOMBRE</div>
-          </div>
-          <div class="logo-container">
-            <img src="assets/icons/mujer-image.PNG" alt="Mujer">
-            <div class="logo-text">MUJER</div>
-          </div>
-          <div class="logo-container">
-            <img src="assets/icons/nino-image.PNG" alt="Nino">
-            <div class="logo-text">NIÑO</div>
+    <div class="container centered-title">
+      <h1>¿PARA QUIÉN COMPRAS?</h1>
+      <div class="options-grid">
+        <div class="option" (click)="selectOption('hombre')">
+          <div class="image-container">
+            <img src="assets/icons/hombre-image.PNG" alt="Hombre placeholder image" width="100">
+            <div class="text-container">
+              <p>Hombre</p>
+            </div>
           </div>
         </div>
-      </div>
-    </body>
-   
-    
-  <!--------------------------------------PRODUCTOS POPULARES-------------------------------------->
-  
-  <body>
-    <div class="container">
-      <h2>PRODUCTOS POPULARES</h2>
-      <div class="options">
-        <div class="category-container">
-          <img src="assets/icons/abrigo.PNG" alt="Abrigo de Invierno Gucci">
-          <div class="category-text">Abrigo de Invierno Gucci</div>
+        <div class="option" (click)="selectOption('mujer')">
+          <div class="image-container">
+            <img src="assets/icons/mujer-image.PNG" alt="Mujer placeholder image" width="100">
+            <div class="text-container">
+              <p>Mujer</p>
+            </div>
+          </div>
         </div>
-        <div class="category-container">
-          <img src="assets/icons/zapatos.PNG" alt="Zapatos NK200">
-          <div class="category-text">Zapatos NK200</div>
-        </div>
-        <div class="category-container">
-          <img src="assets/icons/cuero.PNG" alt="Zapatos de cuero Lacoste">
-          <div class="category-text">Zapatos de cuero Lacoste</div>
-        </div>
-        <div class="category-container">
-          <img src="assets/icons/gorra.PNG" alt="">
-          <div class="category-text">Gorra hueso ajustable Adidas</div>
+        <div class="option" (click)="selectOption('nina')">
+          <div class="image-container">
+            <img src="assets/icons/nino-image.PNG" alt="Niño placeholder image" width="100">
+            <div class="text-container">
+              <p>Niño</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </body>
-  
-  
+   
+    
+  <!--------------------------------------PRODUCTOS POPULARES-------------------------------------->
+  <div class="container centered-title">
+    <h1>PRODUCTOS POPULARES</h1>
+    <div class="products-container">
+      <div class="product" (click)="selectProduct('Abrigo de Invierno Gucci')">
+        <img src="assets/icons/abrigo.PNG" alt="Abrigo de Invierno Gucci" width="100">
+        <br>
+        Abrigo de Invierno Gucci
+      </div>
+      <div class="product" (click)="selectProduct('Zapatos NK200 Nike')">
+        <img src="assets/icons/zapatos.PNG" alt="Zapatos NK200 Nike" width="100">
+        <br>
+        Zapatos NK200 Nike
+      </div>
+      <div class="product" (click)="selectProduct('Zapatos de Cuero Lacoste')">
+        <img src="assets/icons/cuero.PNG" alt=" Zapatos de Cuero Lacoste" width="100">
+        <br>
+        Zapatos de Cuero Lacoste
+      </div>
+      <div class="product" (click)="selectProduct('Gorra hueso ajustable Adidas')">
+        <img src="assets/icons/gorra.PNG" alt="Gorra hueso ajustable Adidas" width="100">
+        <br>
+        Gorra hueso ajustable Adidas
+      </div>
+    </div>
+  </div>
+
     <!--------------------------------------FOOTER-------------------------------------->
     <footer class="footer">
       <div class="footer-column">
