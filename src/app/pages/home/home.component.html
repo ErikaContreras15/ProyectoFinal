@@ -28,48 +28,44 @@
 
 
   <!--------------------------------------CATEGORIAS-------------------------------------->
-  <body>
-      <div class="categories">
-          <h2>CATEGORÍAS POPULARES</h2>
-          <div class="category-row">
-              <div class="category-option">Zapatos</div>
-              <div class="category-option">Hoddies</div>
-              <div class="category-option">Abrigos</div>
-          </div>
-          <div class="category-row">
-              <div class="category-option">Gorras</div>
-              <div class="category-option">Blusas</div>
-          </div>
-      </div>
-  </body>
+  <div class="categories">
+    <h2>CATEGORÍAS POPULARES</h2>
+    <div class="category-row">
+      <div class="category-option" tabindex="0">Zapatos</div>
+      <div class="category-option" tabindex="0">Gorras</div>
+      <div class="category-option" tabindex="0">Hoddies</div>
+    </div>
+    <div class="category-row">
+      <div class="category-option" tabindex="0">Abrigos</div>
+      <div class="category-option" tabindex="0">Gorras</div>
+      <div class="category-option" tabindex="0">Blusas</div>
+    </div>
+  </div>
   
     <!--------------------------------------PARA QUIEN COMPRAS-------------------------------------->
-    <div class="container centered-title">
-      <h1>¿PARA QUIÉN COMPRAS?</h1>
-      <div class="options-grid">
-        <div class="option" (click)="selectOption('hombre')">
-          <div class="image-container">
-            <img src="assets/icons/hombre-image.PNG" alt="Hombre placeholder image" width="100">
-            <div class="text-container">
-              <p>Hombre</p>
-            </div>
-          </div>
+    <div class="centered-title">
+      <h1> ¿PARA QUIÉN COMPRAS?</h1>
+    </div>
+    
+    <div class="options-grid">
+      <div class="option">
+        <div class="image-container">
+          <img src="assets/icons/hombre-image.PNG" alt="Imagen 1">
+          <div class="text-container">Hombre</div>
         </div>
-        <div class="option" (click)="selectOption('mujer')">
-          <div class="image-container">
-            <img src="assets/icons/mujer-image.PNG" alt="Mujer placeholder image" width="100">
-            <div class="text-container">
-              <p>Mujer</p>
-            </div>
-          </div>
+      </div>
+    
+      <div class="option">
+        <div class="image-container">
+          <img src="assets/icons/mujer-image.PNG" alt="Imagen 2">
+          <div class="text-container">Mujer</div>
         </div>
-        <div class="option" (click)="selectOption('nina')">
-          <div class="image-container">
-            <img src="assets/icons/nino-image.PNG" alt="Niño placeholder image" width="100">
-            <div class="text-container">
-              <p>Niño</p>
-            </div>
-          </div>
+      </div>
+    
+      <div class="option">
+        <div class="image-container">
+          <img src="assets/icons/nino-image.PNG"  alt="Imagen 3">
+          <div class="text-container">Niño</div>
         </div>
       </div>
     </div>
@@ -84,39 +80,37 @@
           <div class="image-container">
             <img src="assets/icons/abrigo.PNG" alt="Abrigo de Invierno Gucci" width="100">
           </div>
-          <div class="text-containers">
-            <p>Abrigo de Invierno Gucci</p>
+          <div class="text-container">
+            <p class="product-name">Abrigo de Invierno Gucci</p>
           </div>
         </div>
         <div class="product">
           <div class="image-container">
             <img src="assets/icons/zapatos.PNG" alt="Zapatos NK200 Nike" width="100">
           </div>
-          <div class="text-containers">
-            <p>Zapatos NK200 Nike</p>
+          <div class="text-container">
+            <p class="product-name">Zapatos NK200 Nike</p>
           </div>
         </div>
         <div class="product">
           <div class="image-container">
             <img src="assets/icons/cuero.PNG" alt="Zapatos de Cuero Lacoste" width="100">
           </div>
-          <div class="text-containers">
-            <p>Zapatos de Cuero Lacoste</p>
+          <div class="text-container">
+            <p class="product-name">Zapatos de Cuero Lacoste</p>
           </div>
         </div>
         <div class="product">
           <div class="image-container">
             <img src="assets/icons/gorra.PNG" alt="Gorra hueso ajustable Adidas" width="100">
           </div>
-          <div class="text-containers">
-            <p>Gorra hueso ajustable Adidas</p>
+          <div class="text-container">
+            <p class="product-name">Gorra hueso ajustable Adidas</p>
           </div>
         </div>
       </div>
     </div>
   </div>
- 
- 
 
     <!--------------------------------------FOOTER-------------------------------------->
     <footer class="footer">
