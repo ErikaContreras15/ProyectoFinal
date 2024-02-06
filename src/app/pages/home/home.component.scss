@@ -88,7 +88,6 @@
   
   
   //-------------------------------------------------PARA QUIEN COMPRAS------------------------------------------------
- 
   .centered-title {
     display: flex;
     flex-direction: column;
@@ -125,33 +124,55 @@
     left: 0;
     right: 0;
     text-align: center;
-    background-color: rgba(170, 167, 167, 0.6);
-    color: rgb(27, 25, 25);
-    padding: 1px;
+    background-color: rgba(169, 166, 166, 0.6);
+    color: rgb(26, 23, 23);
+    padding: 2px;
   }
+
 
   //------------------------------------------PRODUCTOS POPULARES-------------------------------------------------------
+ .products-container {
+  display: flex;
+  justify-content: center;
+}
 
-  .centered-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .products-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-  }
-  
-  .product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
+.product-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+}
 
-    //-------------------------------------------------Footer------------------------------------------------
+.product {
+  position: relative;
+  width: 100px;
+}
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0.03x; /* Agregar margen de 20px (2 cm) */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform .2s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.text-containers {
+  background-color: #f2f2f2;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  margin-top: 5px;
+}
+//-------------------------------------------------Footer------------------------------------------------
   .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;
     .footer-column {font-family: Arial, sans-serif;flex: 1;margin-right: 20px;text-align: justify;
       h3 {font-size: 18px;margin-bottom: 10px;}
