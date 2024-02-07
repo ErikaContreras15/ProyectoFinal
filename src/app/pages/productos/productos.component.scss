@@ -39,11 +39,15 @@
   }
 }
 
+
+
+
+
 //----------------------------PRODUCTOS------------
 .productos {
-  max-width: 1200px;
+  max-width: 60%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 5px;
 
   .product-row {
     display: flex;
@@ -51,7 +55,7 @@
     justify-content: space-between;
 
     .product-card {
-      width: 200px; /* Establece el ancho deseado para todos los productos */
+      width: 15%; /* Establece el ancho deseado para todos los productos */
       margin-bottom: 20px;
       padding: 10px;
       border: 1px solid #ccc;
@@ -80,13 +84,13 @@
     }
   }
 }
-//--------para accesorios-----------------
+//--------------------------------Para Accesorios-------------------------
 .accesorios {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 
-  h3 {
+  h2 {
     margin-top: 40px; /* Separación del título "ACCESORIOS" respecto a los productos */
   }
 
@@ -119,12 +123,24 @@
 
         .product-price {
           font-weight: bold;
-          color: #f00;
+          color: #000; /* Color de precio por defecto */
+          
+          // Cambiar el color del precio para los productos 40, 41 y 42
+          &:nth-child(3n + 1) {
+            color: red;
+          }
         }
       }
     }
   }
 }
+
+
+
+
+
+
+
 
 
   //-------------------------------------------------Footer------------------------------------------------
@@ -138,4 +154,53 @@
     .social-icons {img {width: 25px;margin-right: 15px;}}
   }
   .slogan {text-align: center;width: 100%;margin-top: 20px;font-style: italic;font-size: 16px;}
+}
+
+
+
+//----------------------------------------FILTROS---------------------------------------
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 15%; /* Ancho del menú de filtro */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar ul li a.active {
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
 }
