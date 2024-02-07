@@ -39,49 +39,94 @@
   }
 }
 
-
-
+//----------------------------PRODUCTOS------------
 .productos {
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-  
-    .product-row {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-  
-      .product-card {
-        width: calc(20% - 15px);
-        margin: 7.5px;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        overflow: hidden;
-  
-        &:hover {
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .product-card {
+      width: 200px; /* Establece el ancho deseado para todos los productos */
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      .product-image {
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 10px;
+      }
+
+      .product-info {
+        text-align: center;
+
+        .product-title {
+          margin: 0;
+          font-size: 16px;
         }
-  
-        .product-image {
-          width: 100%;
-          height: 200px;
-          background-size: cover;
-          background-position: center;
-        }
-  
-        .product-info {
-          padding: 15px;
-  
-          .product-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-          }
+
+        .product-price {
+          font-weight: bold;
+          color: #f00;
         }
       }
     }
   }
+}
+//--------para accesorios-----------------
+.accesorios {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h3 {
+    margin-top: 40px; /* Separación del título "ACCESORIOS" respecto a los productos */
+  }
+
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .product-card {
+      width: 200px; /* Ancho deseado para todos los productos */
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      .product-image {
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 10px;
+      }
+
+      .product-info {
+        text-align: center;
+
+        .product-title {
+          margin: 0;
+          font-size: 16px;
+        }
+
+        .product-price {
+          font-weight: bold;
+          color: #f00;
+        }
+      }
+    }
+  }
+}
+
+
   //-------------------------------------------------Footer------------------------------------------------
 .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;
   .footer-column {font-family: Arial, sans-serif;flex: 1;margin-right: 20px;text-align: justify;
