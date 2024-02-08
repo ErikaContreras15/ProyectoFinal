@@ -24,6 +24,39 @@
 <!--------------------------------------BODY-------------------------------------->
 <div class="compra-container">
     <div class="column">
+      <h3>Detalles Personales </h3>
+      <label for="Nombres">Nombre Completo:</label>
+      <!--<select id="metodoPago" name="metodoPago">
+        <option value="visa">-Elija su opcion de pago-</option>
+        <option value="visa">VISA</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="paypal">PayPal</option>
+        <option value="visa">Debito</option>
+      </select>-->
+      <input type="text" id="nombreComprador" name="nombreComprador" required>
+      <label for="Direccion">Direccion:</label>
+      <input type="text" id="Direccion" name="Direccion" required>
+      <label for="Nombres">Nombre Completo:</label>
+      <select id="Ciudad" name="Ciudad">
+        <option value="blank">-Elija su ciudad-</option>
+        <option value="cuenca">Cuenca</option>
+        <option value="quito">Quito</option>
+        <option value="guayaquill">Guayaquill</option>
+        <option value="manta">Manta</option>
+        <option value="protoviejo">Portoviejo</option>
+        <option value="guayas">Guayas</option>
+        <option value="morona">Morona Santiago</option>
+        <option value="sucumbios">Sucumbios</option>
+      </select>
+
+
+
+      <label for="correoelectronico">Correo Electrónico:</label>
+      <input type="text" id="correoelectronico" name="correoelectronico" placeholder="example@example.com" required>
+      <label for="celular">Numero de teléfono:</label>
+      <input type="text" id="celular" name="celular" required>
+    </div>
+    <div class="column">
       <h3>Detalles del Pago</h3>
       <label for="metodoPago">Método de Pago:</label>
       <select id="metodoPago" name="metodoPago">
@@ -56,6 +89,9 @@
   <div class="botones-container">
     <button class="confirmar-pago">Confirmar Pago</button>
     <button class="regresar">Regresar</button>
+    <br>
+    <br>
+    <br>  
   </div>
 
 <!--------------------------------------FOOTER-------------------------------------->
