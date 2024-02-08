@@ -11,6 +11,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { HomeComponent } from './pages/home/home.component';
+import { OfertasComponent } from './ofertas/ofertas.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
     FacturaComponent,
     AcercadeComponent,
     HomeComponent,
+    OfertasComponent,
 
 
   ],
