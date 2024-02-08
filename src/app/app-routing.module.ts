@@ -8,6 +8,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
+import { OfertasComponent } from './pages/ofertas/ofertas.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'paginas/acercade', component: AcercadeComponent},
   {path: 'paginas/menu', component: MenuComponent},
   {path: 'paginas/home', component: HomeComponent},
-  { path: 'productos', component: ProductosComponent }
+  { path: 'productos', component: ProductosComponent },
+  { path: 'ofertas', component: OfertasComponent }
 ];
 
 @NgModule({
