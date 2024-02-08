@@ -11,7 +11,11 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { HomeComponent } from './pages/home/home.component';
+<<<<<<< Updated upstream
 import { OfertasComponent } from './ofertas/ofertas.component';
+=======
+import { HttpClientModule } from '@angular/common/http';
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -31,8 +35,9 @@ import { OfertasComponent } from './ofertas/ofertas.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    FormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
