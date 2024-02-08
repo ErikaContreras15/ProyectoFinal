@@ -20,8 +20,8 @@ const routes: Routes = [
   {path: 'paginas/acercade', component: AcercadeComponent},
   {path: 'paginas/menu', component: MenuComponent},
   {path: 'paginas/home', component: HomeComponent},
-  { path: 'productos', component: ProductosComponent },
-  { path: 'ofertas', component: OfertasComponent }
+  { path: 'pagina/productos', component: ProductosComponent },
+  { path: 'paginas/ofertas', component: OfertasComponent }
 ];
 
 @NgModule({

@@ -11,8 +11,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { HomeComponent } from './pages/home/home.component';
-
 import { HttpClientModule } from '@angular/common/http';
+import { OfertasComponent } from './pages/ofertas/ofertas.component';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     FacturaComponent,
     AcercadeComponent,
     HomeComponent,
-
+    OfertasComponent,
 
   ],
   imports: [
