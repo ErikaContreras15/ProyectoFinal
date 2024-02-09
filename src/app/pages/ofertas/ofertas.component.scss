@@ -49,34 +49,26 @@
 
 
 //-------------------------------------------BOBY OFERTAS--------------------------------------------
-
 .page-container {
   position: relative;
   width: 100vw; /* Ancho de la ventana */
   height: 100vh; /* Alto de la ventana */
 }
 
-.centered-title {
-  text-align: center;
-}
-
 .options-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; /* Cambiado de absolute a relative */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column; /* Cambio a columna */
+  align-items: flex-start; /* Alineación a la izquierda */
 }
 
 .option {
-  margin: 10px;
+  margin-bottom: 5px; /* Espacio entre las imágenes */
 }
 
 .image-container {
-  position: relative;
-  width: 150px;
-  height: 150px;
+  width: 70px;
+  height: 70px;
   overflow: hidden;
   border: 1px solid #ccc;
 }
@@ -87,27 +79,16 @@
   object-fit: cover;
 }
 
-.text-container {
+.image-container2 {
+  margin-left: 6px; /* Ajustar margen para que esté junto a las demás imágenes */
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px;
-  text-align: center;
+  top: 0;
+  right: 3cm; /* Ajusta la distancia a 3 centímetros */
+  width: 250px;
+  height: 450px;
+  overflow: hidden;
+  border: 1px solid #ccc;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
