@@ -93,30 +93,108 @@ $image-container2-width: 400px;
   border: 1px solid #ccc;
 }
 
+//----------------TALLA---------------
 .containerTalla {
   position: absolute;
-  top: 158px;
-  right: 19cm;
-  width: 200px;
-  height: 220px;
+  top: 157px;
+  right: 11.80cm; /* espacio entre FOTO11 */
+  width: 505px; /* ancho del contenedor */
+  height: 580px;/*alto del contenedor*/
   overflow: hidden;
-  border: 1px solid #ccc;/* ancho del borde*/
+  border: 0px solid #ccc;
+}
+
+.containerTalla .talla h2 {
+  margin: 0;
+  margin-bottom: 16px; /* separacion de abrigo */
+  font-size: 20px; /* tamaño letra */
 }
 
 .containerTalla .talla {
-  h2 {
-    margin: 0;
-    margin-bottom: 5px;
-    font-size: 25px;
-  }
-
-  .optionsTalla {
-    select {
-      padding: 5px;
-      font-size: 16px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.optionsTalla {
+  position: absolute;
+  top: 70px; /* para bajar */
+  right: calc(9.15cm + 22px); /* ajusta según el ancho de containerTalla */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.optionsTalla select {
+  padding: 7px;
+  font-size: 15px;
+  margin-top: 0.60px;
+}
+
+
+
+.containerTalla .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.containerTalla .title {
+  width: 100px;
+  font-weight: bold;
+}
+
+.containerTalla img {
+  max-width: 500px; /* Tamaño máximo de ancho */
+  max-height: 500px; /* Tamaño máximo de alto */
+  margin-top: 1px; /* Ajusta el margen superior según sea necesario */
+}
+
+.containerTalla .value {
+  font-weight: normal;
+}
+
+.containerCOLOR {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.containerCOLOR .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.containerCOLOR .title {
+  width: 100px;
+  font-weight: bold;
+}
+
+.containerCOLOR img {
+  max-width: 500px; /* Tamaño máximo de ancho */
+  max-height: 500px; /* Tamaño máximo de alto */
+  margin-top: 1px; /* Ajusta el margen superior según sea necesario */
+}
+
+.containerCOLOR .value {
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
