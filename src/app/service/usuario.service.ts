@@ -6,6 +6,7 @@ import { Usuario } from '../domain/usuario';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsuarioService {
   constructor(private http: HttpClient) { }
 

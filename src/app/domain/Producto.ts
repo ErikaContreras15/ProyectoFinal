@@ -1,21 +1,15 @@
 
-import { Ofertas } from "./Ofertas";
+import { DetalleFactura } from "./detalleFactura";
 
-export class producto{
+export class Producto {
+    public pro_id?: number;
+    public pro_nombre?: string;
+    public pro_descripcion?: string;
+    public pro_precio?: number;
+    public pro_iva?: number;
 
-    idProducto: number=0;
-    descripcion:string ='';
-    nombre:string ='';
-    disponibilidad:string='';
-    stock:string='';
-    talla:string='';
-    color:string='';
-    precio:number=0.0;
-
-    ofertas!:Ofertas;
-
+    public detalleFactura?: DetalleFactura[];
 }
-
 
 
 

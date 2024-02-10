@@ -1,12 +1,15 @@
+import { DetalleFactura } from "./detalleFactura";
+import { Usuario } from "./usuario";
 
-import { carritoCompras } from "./carritoCompras";
-export class Factura{
 
-    idFactura: number=0;
-    codigo:string='';
-    fecha:Date | undefined;
-    total: number=0.0;
+export class Factura {
+    public cab_id?: number;
+    public cab_fecha?: Date;
+    public cab_subtotal?: number;
+    public cab_iva?: number;
+    public cab_total?: number;
 
-    
-    carritoCompras:carritoCompras = new carritoCompras();
+    public usuario?: Usuario;
+    public detalles?: DetalleFactura[];
+
 }

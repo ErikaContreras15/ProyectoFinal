@@ -13,4 +13,5 @@ export class SignUpComponent {
     this.router.navigate(['paginas/login'], { replaceUrl: true });
   }
   
+  
 }
