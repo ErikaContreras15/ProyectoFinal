@@ -11,3 +11,4 @@ export class DetalleFactura {
     public usuario?:  Usuario | null;
     public factura?: Factura | null;
 }
+

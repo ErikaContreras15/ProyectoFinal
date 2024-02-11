@@ -1,4 +1,5 @@
 
+import { ɵsetClassMetadata } from "@angular/core";
 import { DetalleFactura } from "./detalleFactura";
 
 export class Producto {
@@ -10,7 +11,6 @@ export class Producto {
 
     public detalleFactura?: DetalleFactura[];
 }
-
 
 
 
