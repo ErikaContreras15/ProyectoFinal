@@ -14,7 +14,7 @@ export class UsuarioComponent {
 
   realizarBusqueda(): void {
     this.usuarioService.getUsuarioPorCodigo(this.codeABuscar).subscribe((result: any) => {
-      console.log('Datos del usuario recibidos:', result); // Verifica los datos recibidos
+      console.log('Datos del usuario recibidos:', result);
       this.usuario = result;
     }, (error) => {
       console.error('Error al buscar usuario:', error);
