@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environments';
 import { Usuario } from '../domain/usuario';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +26,8 @@ export class UsuarioService {
     return this.http.put<any>(url, usuario)
   }
 
+  getUsuarioPorCodigo(codigo: number): Observable<any> {
+    const url = `${environment.WS_PATH}/usuarios/userbycode/${codigo}`;
+    return this.http.get<any>(url);
+  }
 }

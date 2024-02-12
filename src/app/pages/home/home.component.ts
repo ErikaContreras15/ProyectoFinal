@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor(private router: Router) {}
+
   selectedOption: string | null = null;
 
   selectOption(option: string) {
@@ -17,4 +20,9 @@ export class HomeComponent {
   selectProduct(product: string) {
     this.selectedProduct = product;
   }
+
+  irAIniciarSesion() {
+    this.router.navigate(['paginas/usuarios'], { replaceUrl: true });
+  }
+
 }

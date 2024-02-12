@@ -1,6 +1,4 @@
 
-import { ɵsetClassMetadata } from "@angular/core";
-import { DetalleFactura } from "./detalleFactura";
 
 export class Producto {
     public pro_id?: number;
@@ -9,7 +7,7 @@ export class Producto {
     public pro_precio?: number;
     public pro_iva?: number;
 
-    public detalleFactura?: DetalleFactura[];
+    
 }
 
 

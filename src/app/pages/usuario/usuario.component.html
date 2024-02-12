@@ -21,86 +21,39 @@
 </div>
 
 
-<!--------------------------------------CATEGORIAS-------------------------------------->
-<div class="categories">
-  <h2>CATEGORÍAS POPULARES</h2>
-  <div class="category-row">
-    <a routerLink="pagina/productos" class="category-option" tabindex="0">Zapatos</a>
-    <a routerLink="pagina/productos" class="category-option" tabindex="0">Hoddies</a>
-    <a routerLink="pagina/productos" class="category-option" tabindex="0">Abrigos</a>
-  </div>
-  <div class="category-row">
-    <a routerLink="pagina/productos" class="category-option" tabindex="0">Gorras</a>
-    <a routerLink="pagina/productos" class="category-option" tabindex="0">Blusas</a>
-  </div>
-</div>
-  
-<!--------------------------------------PARA QUIEN COMPRAS-------------------------------------->
-<div class="centered-title">
-  <h1> ¿PARA QUIÉN COMPRAS?</h1>
-</div>    
-<div class="options-grid">
-  <div class="option">
-    <div class="image-container">
-      <img src="assets/icons/hombre-image.PNG" alt="Imagen 1">
-        <div class="text-container">Hombre</div>
-    </div>
-  </div>  
-  <div class="option">
-    <div class="image-container">
-      <img src="assets/icons/mujer-image.PNG" alt="Imagen 2">
-        <div class="text-container">Mujer</div>
-    </div>
-  </div>
-  <div class="option">
-    <div class="image-container">
-      <img src="assets/icons/nino-image.PNG"  alt="Imagen 3">
-      <div class="text-container">Niño</div>
-    </div>
-  </div>
-</div>
-   
-<!--------------------------------------PRODUCTOS POPULARES-------------------------------------->
-  <div class="container centered-title">
-    <h1>PRODUCTOS POPULARES</h1>
-    <div class="products-container">
-      <div class="product-row">
-        <div class="product">
-          <div class="image-container">
-            <img src="assets/icons/abrigo.PNG" alt="Abrigo de Invierno Gucci" width="100">
-          </div>
-          <div class="text-container">
-            <p class="product-name">Abrigo de Invierno Gucci</p>
-          </div>
-        </div>
-        <div class="product">
-          <div class="image-container">
-            <img src="assets/icons/zapatos.PNG" alt="Zapatos NK200 Nike" width="100">
-          </div>
-          <div class="text-container">
-            <p class="product-name">Zapatos NK200 Nike</p>
-          </div>
-        </div>
-        <div class="product">
-          <div class="image-container">
-            <img src="assets/icons/cuero.PNG" alt="Zapatos de Cuero Lacoste" width="100">
-          </div>
-          <div class="text-container">
-            <p class="product-name">Zapatos de Cuero Lacoste</p>
-          </div>
-        </div>
-        <div class="product">
-          <div class="image-container">
-            <img src="assets/icons/gorra.PNG" alt="Gorra hueso ajustable Adidas" width="100">
-          </div>
-          <div class="text-container">
-            <p class="product-name">Gorra ajustable Adidas</p>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--------------------------------------BODY-------------------------------------->
+<div class="container">
+  <div class="buscar-container">
+    <label for="codeABuscar">Ingrese el codigo:</label>
+    <input type="text" id="codeABuscar" name="codeABuscar" [(ngModel)]="codeABuscar"/>
+    <button (click)="realizarBusqueda()">Buscar Usuario</button>
   </div>
 
+  <div class="tabla-container" *ngIf="usuario">
+    <table class="tabla-cliente">
+      <thead>
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Usuario</th>
+          <th>Correo</th>
+          <th>Contraseña</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <tr>
+            <td>{{ usuario.codigo }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.usuario }}</td>
+            <td>{{ usuario.correo }}</td>
+            <td>{{ usuario.contrasena }}</td>
+          </tr>
+          
+      </tbody>
+    </table>
+  </div>
+</div>
 <!--------------------------------------FOOTER-------------------------------------->
 <footer class="footer">
   <div class="footer-column">

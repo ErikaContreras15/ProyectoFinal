@@ -9,6 +9,7 @@ import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'paginas/menu', component: MenuComponent},
   {path: 'paginas/home', component: HomeComponent},
   { path: 'pagina/productos', component: ProductosComponent },
-  { path: 'paginas/ofertas', component: OfertasComponent }
+  { path: 'paginas/ofertas', component: OfertasComponent },
+  { path: 'paginas/usuarios', component: UsuarioComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { DetalleFactura } from "./detalleFactura";
-import { Usuario } from "./usuario";
+import { Pago } from "./pago";
 
 
 export class Factura {
@@ -9,7 +9,7 @@ export class Factura {
     public fac_iva?: number;
     public fac_total?: number;
 
-    public usuario?: Usuario;
+    public pago?: Pago;
     public detalles?: DetalleFactura[];
 
 }
