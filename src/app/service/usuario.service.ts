@@ -19,8 +19,7 @@ export class UsuarioService {
   saveUsuario(usuario: Usuario){
     let url = environment.WS_PATH + "/usuarios"
     return this.http.post<any>(url, usuario)
-  }
-  
+  }  
   updatePersona(usuario: Usuario){
     let url = environment.WS_PATH + "/usuario"
     return this.http.put<any>(url, usuario)
