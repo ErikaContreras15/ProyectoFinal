@@ -20,61 +20,22 @@
     </div>
   </div>
   <!----------------------------------BODY-------------------------------------------------->
-  <button>← Regresar</button>
-<!--
-  <body>
-  <form>
-      <table>
-          <tr>
-              <td>Código</td>
-              <td><input type="number" name="txtCodigo" id="txtCodigo" [(ngModel)]="person.codigo"></td>
-          </tr>
-          <tr>
-              <td>Nombre</td>
-              <td><input type="text" name="txtNombre" id="txtNombre" [(ngModel)]="person.nombre"></td>
-          </tr>
-          <tr>
-              <td>DNI</td>
-              <td><input type="text" name="txtDNI" id="txtDNI" [(ngModel)]="person.dni"></td>
-          </tr>
-          <tr>
-              <td>Mes</td>
-              <td><input type="text" name="txtMes" id="txtMes" [(ngModel)]="person.mes"></td>
-          </tr>
-          <tr>
-              <td>Deuda</td>
-              <td><input type="text" name="txtDeuda" id="txtDeuda" [(ngModel)]="person.deuda"></td>
-          </tr>
-          <tr>
-              <td>DNI a buscar</td>
-              <td><input type="text" name="txtBuscarDNI" [(ngModel)]="dniABuscar"></td>
-            </tr>
-      </table>
-      <button (click)="guardar()">Guardar</button>
-      <button (click)="actualizar()">Actualizar</button>
-      <button (click)="buscarPorDNI(dniABuscar)">Buscar</button>
-  </form>
-  <table>
-      <tr>
-          <th>Código</th>
-          <th>DNI</th>
-          <th>Nombre</th>
-          <th>Mes</th>
-          <th>Deuda</th>
-      </tr>
-      <tr *ngFor="let cli of personas | async">
-          <td>{{cli.codigo}}</td>
-          <td>{{cli.dni}}</td>
-          <td>{{cli.nombre}}</td>
-          <td>{{cli.mes}}</td>
-          <td>{{cli.deuda}}</td>
-          <td>
-              <button (click)="eliminarPersona(cli.codigo)">Eliminar</button>
-          </td>
-      </tr>
-  </table>
-  </body>
--->    
+  <div class="carrito">
+    <h2>Carrito de compras</h2>
+    <div *ngIf="detalles && detalles.length > 0">
+      <div class="detalle" *ngFor="let detalle of detalles">
+        <div class="info-detalle">
+          
+          <p><strong>Precio:</strong> {{ detalle.det_precio }}</p>
+          <p><strong>Cantidad:</strong> {{ detalle.det_cantidad }}</p>
+          <p><strong>Subtotal:</strong> {{ detalle.det_subtotal }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!detalles || detalles.length === 0">
+      <p>No hay detalles en el carrito.</p>
+    </div>
+  </div>
   <!--------------------------------------FOOTER-------------------------------------->
   <footer class="footer">
     <div class="footer-column">

@@ -46,10 +46,29 @@
       .search-button {width: 25px;}
     }
   }
-  //------------------------------------PORTADA------------------------------------------>
+  //------------------------------------BODY------------------------------------------>
+  .carrito {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   
-
-
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+  }
+  
 
   
   //-------------------------------------------------Footer------------------------------------------------
