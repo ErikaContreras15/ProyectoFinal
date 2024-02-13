@@ -32,7 +32,7 @@
             <h2>Abrigo lijero con bolsillos</h2>
             Talla:
             <div class="optionsTalla">  
-              <select [(ngModel)]="producto.protalla">
+              <select [(ngModel)]="tallaSeleccionada">
                 <option value="azul">-- Escoje tu talla --</option>
                 <option value="xs">XS</option>
                 <option value="s">S</option>
@@ -44,7 +44,7 @@
             </div><br>
             Color:<br>
             <div class="optionsColor">
-              <select [(ngModel)]="producto.prodescripcion">
+              <select [(ngModel)]="colorSeleccionado">
                 <option value="azul">-- Escoje tu color --</option>
                 <option value="azul">Azul</option>
                 <option value="negro">Negro</option>
@@ -83,8 +83,8 @@
                 <img src="assets/icons/paypal.jpg" alt="Paypal" >
                 <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
               </div>
-              <button *ngIf="!error" (click)="guardarProducto()">Añadir al carrito</button><br>
-              <button >Añadir a favoritos</button>
+              <button *ngIf="!error" (click)="asignarValoresAProducto()">Añadir al carrito</button><br>
+              <button (click)="aadirAFavoritos()">Añadir a favoritos</button>
             </div>
         </div>
     </div>

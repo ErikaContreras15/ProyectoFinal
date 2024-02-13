@@ -10,7 +10,7 @@ import { ProductoService } from 'src/app/service/producto.service';
 })
 export class OfertasComponent {
   constructor(private router: Router, private productoService: ProductoService) {}
-
+  prod: Producto = new Producto()
   producto: Producto = new Producto();
   peso: number = 1100;
   codigo: number = 12015550;
@@ -22,6 +22,8 @@ export class OfertasComponent {
   cantidad: number = 0;
   total: number = 0;
   error: boolean = false;
+  colorSeleccionado: string = '';
+  tallaSeleccionada: string = ''; 
 
   actualizarTotal() {
     const inputCantidad = document.getElementById('numero') as HTMLInputElement;
@@ -35,40 +37,45 @@ export class OfertasComponent {
       this.total = this.subtotal * this.cantidad;
     }
     const spanTotal = document.getElementById('total');
-    if (spanTotal) {
-      spanTotal.textContent = this.total.toFixed(2);
-    }
+    if (spanTotal) {spanTotal.textContent = this.total.toFixed(2);}
   }
 
-  regresar() {
-    window.history.back();
-  }
+  regresar() {window.history.back();}
 
-  guardarProducto() {
-    if (!this.error) {
-      this.producto = {
-        procodigo: this.codigo,
-        pronombre: this.nombre,
-        proprecio: this.total,
-        proiva: this.iva,
-        prostock: this.disponibilidad,
-        promarca: this.marca,
-        propeso: this.peso,
-        prodescripcion: this.producto.prodescripcion,
-        protalla: this.producto.protalla
-      };
-  
-      this.productoService.saveProducto(this.producto).subscribe(
-        (response) => {
-          console.log('Producto guardado exitosamente:', response);
-        },
-        (error) => {
-          console.error('Error al guardar el producto:', error);
-        }
-      );
-    } else {
-      console.error('No se puede guardar el producto debido a errores en los datos.');
-    }
+  asignarValoresAProducto() {
+    const nuevoProducto: Producto = {
+      codigo: this.codigo,
+      descripcion: this.colorSeleccionado,
+      iva: this.iva,
+      marca: this.marca,
+      nombre: this.nombre,
+      precio: this.total,
+      peso: this.peso,
+      stock: this.disponibilidad,
+      talla: this.tallaSeleccionada
+    };
+
+    console.log('Nuevo producto:', nuevoProducto);
+
+    this.productoService.saveProducto(nuevoProducto).subscribe(
+      (response) => {
+        console.log('Producto guardado exitosamente:', response);
+      },
+      (error) => {
+        console.error('Error al guardar el producto:', error);
+      }
+    );
+}
+
+
+  aadirAFavoritos() {
+    console.log('Código:', this.codigo);
+    console.log('Nombre:', this.nombre);
+    console.log('Precio:', this.producto.precio);
+    console.log('IVA:', this.producto.iva);
+    console.log('Stock:', this.producto.stock);
+    console.log('Marca:', this.producto.marca);
+    console.log('Peso:', this.producto.peso);
   }
   
 }

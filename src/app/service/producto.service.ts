@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Producto } from '../domain/producto';
 import { environment } from 'src/environments/environments';
-import { Observable, catchError } from 'rxjs';
+import { Observable, catchError, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +36,22 @@ export class ProductoService {
         })
       );
   }
-  saveProducto(producto: Producto): Observable<any> {
+  /*saveProducto(producto: Producto): Observable<any> {
     return this.http.post(`${environment.WS_PATH}/productos`, producto);
-  }
+  }*/
+  saveProducto(producto: Producto) {
+    console.log('Producto recibido en el servicio:', producto); // Verificar que el objeto producto se reciba correctamente
+
+    let url = environment.WS_PATH + "/productos";
+    return this.http.post<any>(url, producto)
+        .pipe(
+            tap(response => console.log('Respuesta del servidor:', response)), // Verificar la respuesta del servidor
+            catchError(error => {
+                console.error('Error al guardar el producto:', error);
+                throw error;
+            })
+        );
+}
+  
+  
 }
