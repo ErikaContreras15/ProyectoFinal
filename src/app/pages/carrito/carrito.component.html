@@ -20,21 +20,26 @@
     </div>
   </div>
   <!----------------------------------BODY-------------------------------------------------->
-  <div class="carrito">
-    <h2>Carrito de compras</h2>
-    <div *ngIf="detalles && detalles.length > 0">
-      <div class="detalle" *ngFor="let detalle of detalles">
-        <div class="info-detalle">
-          <p><strong>Precio:</strong> {{ detalle.detprecio }}</p>
-          <p><strong>Cantidad:</strong> {{ detalle.detcantidad }}</p>
-          <p><strong>Subtotal:</strong> {{ detalle.detsubtotal }}</p>
-        </div>
-      </div>
-    </div>
-    <div *ngIf="!detalles || detalles.length === 0">
-      <p>No hay detalles en el carrito.</p>
-    </div>
-  </div>
+  <div class="Title-body"><h3>Mi carrito</h3></div>
+  <table class="productos-table">
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Marca</th>
+      <th>Talla</th>
+  </tr>
+    <tr *ngFor="let producto of productos">
+      <td>{{ producto.codigo }}</td>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.marca }}</td>
+      <td>{{ producto.talla }}</td>
+      <td>
+        <button class="eliminar-button">Eliminar</button>
+      </td>
+    </tr>
+  </table>
+  
+
   <!--------------------------------------FOOTER-------------------------------------->
   <footer class="footer">
     <div class="footer-column">
