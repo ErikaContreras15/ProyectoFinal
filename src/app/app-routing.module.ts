@@ -10,6 +10,7 @@ import { MenuComponent } from './template/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
@@ -21,9 +22,10 @@ const routes: Routes = [
   {path: 'paginas/acercade', component: AcercadeComponent},
   {path: 'paginas/menu', component: MenuComponent},
   {path: 'paginas/home', component: HomeComponent},
-  { path: 'pagina/productos', component: ProductosComponent },
-  { path: 'paginas/ofertas', component: OfertasComponent },
-  { path: 'paginas/usuarios', component: UsuarioComponent },
+  {path: 'pagina/productos', component: ProductosComponent },
+  {path: 'paginas/ofertas', component: OfertasComponent },
+  {path: 'paginas/usuarios', component: UsuarioComponent },
+  {path: 'paginas/carrito', component: CarritoComponent },
 ];
 
 @NgModule({

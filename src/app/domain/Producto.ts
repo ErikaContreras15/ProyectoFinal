@@ -1,13 +1,13 @@
-
-
 export class Producto {
-    public pro_id?: number;
-    public pro_nombre?: string;
-    public pro_descripcion?: string;
-    public pro_precio?: number;
-    public pro_iva?: number;
-
-    
+    public procodigo?: number;
+    public pronombre?: string;
+    public prodescripcion?: string;
+    public proprecio?: number;
+    public proiva?: number;
+    public protalla?: String;
+    public prostock?: number;
+    public promarca?: String;
+    public propeso?: number;
 }
 
 

@@ -20,8 +20,10 @@ export class HomeComponent {
     this.selectedProduct = product;
   }
 
-  irAIniciarSesion() {
+  irAUsuario() {
     this.router.navigate(['paginas/usuarios'], { replaceUrl: true });
   }
-
+  irACarrito() {
+    this.router.navigate(['paginas/carrito'], {replaceUrl: true});
+  }
 }

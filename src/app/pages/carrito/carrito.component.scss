@@ -1,0 +1,85 @@
+//-------------------------------------------------Encabezado------------------------------------------------
+.header-container {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;  
+    .column {flex: 1; text-align: center;}
+  }
+  .seccion-tres-columnas {
+    background-color: #b8b8b8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px;
+    .column {flex: 1; text-align: center;
+      input {
+        width: 70%;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      .tabs {display: flex; margin-top: 10px;
+        span {
+          flex: 1;
+          background-color: #999999;
+          border-radius: 15px;
+          text-align: center;
+          border: 1px solid #464646;
+          padding: 5px;
+          cursor: pointer;
+          &:not(:last-child) {margin-right: 5px;}
+          a {text-decoration: none; color: white;}
+        }
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 50%;
+        img {max-width: 100%; width: 30px;}
+      }
+      .logo-img {width: 85px;}
+      .search-button {width: 25px;}
+    }
+  }
+  //------------------------------------BODY------------------------------------------>
+  .carrito {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+  }
+  
+
+  
+  //-------------------------------------------------Footer------------------------------------------------
+    .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;
+      .footer-column {font-family: Arial, sans-serif;flex: 1;margin-right: 20px;text-align: justify;
+        h3 {font-size: 18px;margin-bottom: 10px;}
+        p {margin: 5px 0;}
+        ul {list-style-type: none;padding: 0;margin: 0;li {margin: 5px 0;}}
+        .footer-center{text-align: center;}
+        .footer-end{text-align: center;}
+        .social-icons {img {width: 25px;margin-right: 15px;}}
+      }
+      .slogan {text-align: center;width: 100%;margin-top: 20px;font-style: italic;font-size: 16px;}
+    }
