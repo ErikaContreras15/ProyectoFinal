@@ -25,10 +25,9 @@
     <div *ngIf="detalles && detalles.length > 0">
       <div class="detalle" *ngFor="let detalle of detalles">
         <div class="info-detalle">
-          
-          <p><strong>Precio:</strong> {{ detalle.det_precio }}</p>
-          <p><strong>Cantidad:</strong> {{ detalle.det_cantidad }}</p>
-          <p><strong>Subtotal:</strong> {{ detalle.det_subtotal }}</p>
+          <p><strong>Precio:</strong> {{ detalle.detprecio }}</p>
+          <p><strong>Cantidad:</strong> {{ detalle.detcantidad }}</p>
+          <p><strong>Subtotal:</strong> {{ detalle.detsubtotal }}</p>
         </div>
       </div>
     </div>

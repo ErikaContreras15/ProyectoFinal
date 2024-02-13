@@ -9,6 +9,3 @@ export class Producto {
     public promarca?: String;
     public propeso?: number;
 }
-
-
-

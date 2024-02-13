@@ -22,7 +22,7 @@
  
 <!---------------------------------------------BODY---------------------------------------------------->
 <body>
-  <button>← Regresar</button>
+  <button (click)="regresar()">← Regresar</button>
     <div class="container">
         <div class="column left">
             <img src="assets/icons/FOTO11.PNG" alt="Imagen">
@@ -64,7 +64,7 @@
             <p>Marca: <span id="marca">Violantino</span></p>
             <p>Peso: <span id="peso">1100</span> gr</p>
             <p>SKU: <span id="sku">12015550</span></p>
-            <input type="number" id="numero" name="numero" (change)="actualizarTotal()">
+            Cantidad: <input type="number" id="numero" name="numero" (change)="actualizarTotal()">
             <div *ngIf="error" class="error-box">¡Error! La cantidad es negativa o superior al stock.</div>
           </div>
         </div>

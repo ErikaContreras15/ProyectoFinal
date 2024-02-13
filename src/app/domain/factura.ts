@@ -1,7 +1,5 @@
 import { DetalleFactura } from "./detalleFactura";
 import { Pago } from "./pago";
-
-
 export class Factura {
     public fac_id?: number;
     public fac_fecha?: Date;
@@ -11,5 +9,4 @@ export class Factura {
 
     public pago?: Pago;
     public detalles?: DetalleFactura[];
-
 }
