@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-ofertas',
-  templateUrl: './ofertas.component.html',
-  styleUrls: ['./ofertas.component.scss']
+  selector: 'app-productod',
+  templateUrl: './productod.component.html',
+  styleUrls: ['./productod.component.scss']
 })
-export class OfertasComponent {
-  peso: number = 1100;
-  codigo: number = 12015550;
-  subtotal: number = 25.5;
+export class ProductodComponent {
+  constructor(private router: Router) {}
+
+  peso: number = 900;
+  codigo: number = 15968544;
+  subtotal: number = 37.99;
   cantidad: number = 0;
   total: number = 0;
   error: boolean = false;
-  disponibilidad: number = 165;
+  disponibilidad: number = 300;
 
   actualizarTotal() {
     const inputCantidad = document.getElementById('numero') as HTMLInputElement;

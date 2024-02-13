@@ -4,5 +4,4 @@ export class Pago {
     public pro_numero?: number;
     public pro_fecha?: Date;
     public pro_cvv?: string;
-
 }

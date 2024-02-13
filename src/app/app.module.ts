@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ProductobComponent } from './pages/productob/productob.component';
+import { ProductocComponent } from './pages/productoc/productoc.component';
+import { ProductodComponent } from './pages/productod/productod.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
     OfertasComponent,
     UsuarioComponent,
     CarritoComponent,
+    ProductobComponent,
+    ProductocComponent,
+    ProductodComponent,
 
   ],
   imports: [

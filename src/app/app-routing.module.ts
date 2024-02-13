@@ -11,6 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ProductobComponent } from './pages/productob/productob.component';
+import { ProductocComponent } from './pages/productoc/productoc.component';
+import { ProductodComponent } from './pages/productod/productod.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
@@ -26,6 +29,9 @@ const routes: Routes = [
   {path: 'paginas/ofertas', component: OfertasComponent },
   {path: 'paginas/usuarios', component: UsuarioComponent },
   {path: 'paginas/carrito', component: CarritoComponent },
+  {path: 'paginas/productob', component: ProductobComponent },
+  {path: 'paginas/productoc', component: ProductocComponent },
+  {path: 'paginas/productod', component: ProductodComponent },
 ];
 
 @NgModule({

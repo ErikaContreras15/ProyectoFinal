@@ -1,4 +1,3 @@
-
 export class Cliente {
     public clicodigo?: number;
     public clinombre?: string;

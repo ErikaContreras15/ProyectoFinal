@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-ofertas',
-  templateUrl: './ofertas.component.html',
-  styleUrls: ['./ofertas.component.scss']
+  selector: 'app-productoc',
+  templateUrl: './productoc.component.html',
+  styleUrls: ['./productoc.component.scss']
 })
-export class OfertasComponent {
-  peso: number = 1100;
-  codigo: number = 12015550;
-  subtotal: number = 25.5;
+export class ProductocComponent {
+  peso: number = 200;
+  codigo: number = 15251489;
+  subtotal: number = 33.60;
   cantidad: number = 0;
   total: number = 0;
   error: boolean = false;
-  disponibilidad: number = 165;
+  disponibilidad: number = 300;
 
   actualizarTotal() {
     const inputCantidad = document.getElementById('numero') as HTMLInputElement;
