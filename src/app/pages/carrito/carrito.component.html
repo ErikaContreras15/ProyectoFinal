@@ -1,0 +1,117 @@
+<!--------------------------------------ENCABEZADO-------------------------------------->
+<div class="header-container">
+    <div class="column"><p>Envíos Gratis!</p></div>
+    <div class="column"><p>Hasta el 40% OFF | Black January</p></div>
+    <div class="column"><p>IMPORTANTE</p></div>
+  </div>
+  <div class="seccion-tres-columnas">
+    <div class="column"><img src="assets/icons/stole.jpg" alt="Logo de la tienda" class="logo-img"></div>
+    <div class="column">
+        <input type="text" placeholder="Buscar">
+        <button class="search-button"><img src="assets/icons/search.jpg" alt="Perfil" class="search-img"></button>
+        <div class="tabs">
+            <span><a href="paginas/home">INICIO</a></span><span><a href="pagina/productos">TIENDA</a></span><span><a href="paginas/ofertas">OFERTAS</a></span>
+        </div>
+    </div>
+    <div class="column">
+        <button (click)="irAUsuario()" ><img src="assets/icons/user.jpg" alt="Perfil"></button>
+        <button><img src="assets/icons/heart.jpg" alt="Perfil"></button>
+        <button (click)="irAUsuario()" ><img src="assets/icons/carrito.jpg" alt="Perfil"></button>
+    </div>
+  </div>
+  <!----------------------------------BODY-------------------------------------------------->
+  <button>← Regresar</button>
+<!--
+  <body>
+  <form>
+      <table>
+          <tr>
+              <td>Código</td>
+              <td><input type="number" name="txtCodigo" id="txtCodigo" [(ngModel)]="person.codigo"></td>
+          </tr>
+          <tr>
+              <td>Nombre</td>
+              <td><input type="text" name="txtNombre" id="txtNombre" [(ngModel)]="person.nombre"></td>
+          </tr>
+          <tr>
+              <td>DNI</td>
+              <td><input type="text" name="txtDNI" id="txtDNI" [(ngModel)]="person.dni"></td>
+          </tr>
+          <tr>
+              <td>Mes</td>
+              <td><input type="text" name="txtMes" id="txtMes" [(ngModel)]="person.mes"></td>
+          </tr>
+          <tr>
+              <td>Deuda</td>
+              <td><input type="text" name="txtDeuda" id="txtDeuda" [(ngModel)]="person.deuda"></td>
+          </tr>
+          <tr>
+              <td>DNI a buscar</td>
+              <td><input type="text" name="txtBuscarDNI" [(ngModel)]="dniABuscar"></td>
+            </tr>
+      </table>
+      <button (click)="guardar()">Guardar</button>
+      <button (click)="actualizar()">Actualizar</button>
+      <button (click)="buscarPorDNI(dniABuscar)">Buscar</button>
+  </form>
+  <table>
+      <tr>
+          <th>Código</th>
+          <th>DNI</th>
+          <th>Nombre</th>
+          <th>Mes</th>
+          <th>Deuda</th>
+      </tr>
+      <tr *ngFor="let cli of personas | async">
+          <td>{{cli.codigo}}</td>
+          <td>{{cli.dni}}</td>
+          <td>{{cli.nombre}}</td>
+          <td>{{cli.mes}}</td>
+          <td>{{cli.deuda}}</td>
+          <td>
+              <button (click)="eliminarPersona(cli.codigo)">Eliminar</button>
+          </td>
+      </tr>
+  </table>
+  </body>
+-->    
+  <!--------------------------------------FOOTER-------------------------------------->
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>CONTACTO</h3>
+      <p>🎧 Atención al cliente 24/7: (+593)987654321</p>
+      <p>Stole es una tienda de ropa online que ofrece una seleccion unica de prendas modernas y elegantes. Con un enfoque en la calidad, moda y comodidad, Stole brinda a sus clientes una experiencia de compra conveniente y estilixada, con envios rápidos y atencion personalizada</p>
+      <div class="social-icons">
+        <img src="assets/icons/facebook.jpg" alt="facebook" >
+        <img src="assets/icons/instagram.jpg" alt="instagram">
+        <img src="assets/icons/youtube.jpg" alt="youtube">
+        <img src="assets/icons/whatsapp.jpg" alt="whatsapp">
+        <img src="assets/icons/tik-tok.jpg" alt="tiktok">
+        <img src="assets/icons/gorjeo.jpg" alt="twitter">
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-center">
+        <h3>PREGUNTAS FRECUENTES</h3>
+        <ul>
+          <li><a href="paginas/acercade"><u>¿Qué es STOLE?</u></a></li>
+          <li><u>Centro de ayuda en linea</u></li>
+          <li><u>Política de devolucion de productos</u></li>
+          <li><u>Términos y condiciones</u></li>
+          <li><u>Trabaja con nosotros</u></li>
+          <li><u>Propiedad intelectual</u></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-end">
+        <h3>MÉTODOS DE PAGO</h3>
+        <div class="social-icons">
+          <img src="assets/icons/visa.jpg" alt="Visa" >
+          <img src="assets/icons/paypal.jpg" alt="Paypal" >
+          <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
+        </div>
+      </div>
+    </div>
+    <p class="slogan">® 2014 - 2029 - Stole - Todos los derechos reservados - Todas las marcas son propiedad de sus respectivos dueños </p>
+  </footer>
