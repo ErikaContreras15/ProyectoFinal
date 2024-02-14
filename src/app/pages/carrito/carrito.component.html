@@ -16,23 +16,19 @@
       <th>Código</th>
       <th>Nombre</th>
       <th>Marca</th>
-      <th>Talla</th>
+      <th>Precio</th>
   </tr>
     <tr *ngFor="let producto of productos">
       <td>{{ producto.codigo }}</td>
       <td>{{ producto.nombre }}</td>
       <td>{{ producto.marca }}</td>
-      <td>{{ producto.talla }}</td>
+      <td>{{ producto.precio }}</td>
       <td>
         <button class="eliminar-button">Eliminar</button>
       </td>
     </tr>
   </table>
-  <!-- Aquí va tu tabla de productos -->
-
-<!-- Sección para completar pago y mostrar reporte -->
   <div class="completar-pago-section">
-
     <div class="reporte">
       <h3>Resumen de compra</h3>
       <p>Subtotal: </p>
@@ -41,8 +37,8 @@
       <tr *ngFor="let producto of productos">
         <td>{{ producto.subtotal}}</td>
       </tr>
-      <button class="completar-pago-button">Completar Pago</button><br>
-      <button class="continuar-comprando-button">Continuar Comprando</button>
+      <button class="completar-pago-button" (click)="irAFactura()">Completar Pago</button><br>
+      <button class="continuar-comprando-button" (click)="irAtienda()">Continuar Comprando</button>
     </div>
     <br>
   </div>

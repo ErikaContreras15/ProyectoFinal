@@ -42,5 +42,6 @@ export class FacturaComponent {
   irACarrito() {
     this.router.navigate(['paginas/carrito'], { replaceUrl: true });
   }
+  regresar() {window.history.back();}
 }
 

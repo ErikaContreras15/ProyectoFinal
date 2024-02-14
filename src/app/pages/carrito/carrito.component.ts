@@ -23,6 +23,8 @@ export class CarritoComponent {
   }
   irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
   irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
+  irAFactura() {this.router.navigate(['paginas/Factura'], {replaceUrl: true});}
+  irAtienda() {this.router.navigate(['paginas/productos'], {replaceUrl: true});}
   
   obtenerDetallesCarrito(): void {
     this.carritoService.obtenerDetallesCarrito().subscribe(

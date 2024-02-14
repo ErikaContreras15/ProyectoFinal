@@ -19,7 +19,6 @@
   .completar-pago-section {
     margin-top: 20px;
     text-align: center;
-  
     .completar-pago-button {
       background-color: #007bff;
       color: white;
@@ -28,10 +27,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: #0056b3;
-      }
+      &:hover {background-color: #0056b3;}
     }.continuar-comprando-button {
       background-color: #007bff;
       color: white;
@@ -41,24 +37,17 @@
       cursor: pointer;
       transition: background-color 0.3s;
       margin-top: 10px;
-      &:hover {
-        background-color: #0056b3;
-      }
+      &:hover {background-color: #0056b3;}
     }
-  
     .reporte {
       margin-top: 20px;
       padding: 10px;
-      border: 1px solid #ccc;
+      //border: 1px solid #ccc;
       border-radius: 5px;
-  
-      p {
-        margin: 5px 0;
-      }
+      background: linear-gradient(to right, #b3b3b3 0%, #ffffff 50%, #b3b3b3 100%);
+      p {margin: 5px 0;}
     }
   }
-  
-  
   .productos-table {
     width: 100%;
     border-collapse: collapse;
@@ -79,12 +68,9 @@
     border-radius: 15px;
   }
   .eliminar-button:hover {background-color: rgb(2, 1, 100);}
-  .Title-body{
-    text-align: center;
-  }
+  .Title-body{text-align: center;}
 
-  
-  //-------------------------------------------------Footer------------------------------------------------
+    //-------------------------------------------------Footer------------------------------------------------
     .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;
       .footer-column {font-family: Arial, sans-serif;flex: 1;margin-right: 20px;text-align: justify;
         h3 {font-size: 18px;margin-bottom: 10px;}
