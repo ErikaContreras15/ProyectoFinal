@@ -13,46 +13,47 @@
 <!--------------------------------------BODY-------------------------------------->
 <div class="compra-container">
     <div class="column">
-      <h3>Detalles Personales </h3>
-      <label for="Nombres">Nombre Completo:</label>
-      <input type="text" id="nombreComprador" name="nombreComprador" required>
-      <label for="cedula">Cédula:</label>
-      <input type="text" id="cedula" name="cedula" required>
-      <label for="Nombres">Ciudad:</label>
-      <select id="Ciudad" name="Ciudad">
-        <option value="blank">-Elija su ciudad-</option>
-        <option value="cuenca">Cuenca</option>
-        <option value="quito">Quito</option>
-        <option value="guayaquill">Guayaquill</option>
-        <option value="manta">Manta</option>
-        <option value="protoviejo">Portoviejo</option>
-        <option value="guayas">Guayas</option>
-        <option value="morona">Morona Santiago</option>
-        <option value="sucumbios">Sucumbios</option>
-      </select>
-      <label for="Direccion">Dirección:</label>
-      <input type="text" id="Direccion" name="Direccion" required> 
-      <label for="correoelectronico">Correo Electrónico:</label>
-      <input type="text" id="correoelectronico" name="correoelectronico" placeholder="example@example.com" required>
-      <label for="celular">Numero de teléfono:</label>
-      <input type="text" id="celular" name="celular" required>
-    </div>
-    <div class="column">
-      <h3>Detalles del Pago</h3>
-      <label for="metodoPago">Método de Pago:</label>
-      <select id="metodoPago" name="metodoPago">
-        <option value="visa">-Elija su opcion de pago-</option>
-        <option value="visa">VISA</option>
-        <option value="mastercard">MasterCard</option>
-        <option value="paypal">PayPal</option>
-        <option value="visa">Debito</option>
-      </select>
-      <label for="numeroTarjeta">Número de Tarjeta:</label>
-      <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
-      <label for="fechaVencimiento">Fecha de Vencimiento:</label>
-      <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/YY" required>
-      <label for="cvv">CVV/CVC:</label>
-      <input type="text" id="cvv" name="cvv" required>
+            <h3>Detalles Personales</h3>
+            <label for="nombreComprador">Nombre Completo:</label>
+            <input type="text" id="nombreComprador" name="nombreComprador" required [(ngModel)]="detallesPersonales.nombreCompleto">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required [(ngModel)]="detallesPersonales.cedula">
+            <label for="Ciudad">Ciudad:</label>
+            <select id="Ciudad" name="Ciudad" [(ngModel)]="detallesPersonales.ciudad">
+                <option value="blank">-Elija su ciudad-</option>
+                <option value="cuenca">Cuenca</option>
+                <option value="quito">Quito</option>
+                <option value="guayaquill">Guayaquil</option>
+                <option value="manta">Manta</option>
+                <option value="portoviejo">Portoviejo</option>
+                <option value="guayas">Guayas</option>
+                <option value="morona">Morona Santiago</option>
+                <option value="sucumbios">Sucumbios</option>
+            </select>
+            <label for="Direccion">Dirección:</label>
+            <input type="text" id="Direccion" name="Direccion" required [(ngModel)]="detallesPersonales.direccion"> 
+            <label for="correoelectronico">Correo Electrónico:</label>
+            <input type="email" id="correoelectronico" name="correoelectronico" placeholder="example@example.com" required [(ngModel)]="detallesPersonales.correoElectronico">
+            <label for="celular">Numero de teléfono:</label>
+            <input type="tel" id="celular" name="celular" required [(ngModel)]="detallesPersonales.numeroTelefono">
+        </div>
+        <div class="column">
+            <h3>Detalles del Pago</h3>
+            <label for="metodoPago">Método de Pago:</label>
+            <select id="metodoPago" name="metodoPago" [(ngModel)]="detallesPago.metodoPago">
+                <option value="blank">-Elija su opcion de pago-</option>
+                <option value="visa">VISA</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="paypal">PayPal</option>
+                <option value="debito">Debito</option>
+            </select>
+            <label for="numeroTarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numeroTarjeta" name="numeroTarjeta" required [(ngModel)]="detallesPago.numeroTarjeta">
+            <label for="fechaVencimiento">Fecha de Vencimiento:</label>
+            <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/YY" required [(ngModel)]="detallesPago.fechaVencimiento">
+            <label for="cvv">CVV/CVC:</label>
+            <input type="text" id="cvv" name="cvv" required [(ngModel)]="detallesPago.cvv">
+        
     </div>
     <div class="column">
       <h3>Resumen de Compra</h3>
@@ -72,6 +73,7 @@
     <br>
     <br>  
   </div>
+
 
    <!--------------------------------------FOOTER-------------------------------------->
    <footer class="footer">

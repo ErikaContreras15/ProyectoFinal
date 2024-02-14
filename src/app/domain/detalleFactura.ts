@@ -1,6 +1,5 @@
 import { Factura } from "./factura";
 import { Producto } from "./producto";
-
 import { Usuario } from "./usuario";
 
 export class DetalleFactura {
