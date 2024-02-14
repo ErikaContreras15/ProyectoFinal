@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class ProductodComponent {
   constructor(private router: Router) {}
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
+
 
   peso: number = 900;
   codigo: number = 15968544;

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DetalleFactura } from 'src/app/domain/detalleFactura';
 import { Producto } from 'src/app/domain/producto';
+import { DetalleFacturaService } from 'src/app/service/detalle-factura.service';
 import { ProductoService } from 'src/app/service/producto.service';
 
 @Component({
@@ -9,9 +11,13 @@ import { ProductoService } from 'src/app/service/producto.service';
   styleUrls: ['./ofertas.component.scss']
 })
 export class OfertasComponent {
-  constructor(private router: Router, private productoService: ProductoService) {}
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
+
+  constructor(private router: Router, private productoService: ProductoService, private detalleService: DetalleFacturaService) {}
   prod: Producto = new Producto()
-  producto: Producto = new Producto();
+  detalleFactura: DetalleFactura = new DetalleFactura();
+  codigoDetalle: number = 1;
   peso: number = 1100;
   codigo: number = 12015550;
   subtotal: number = 25.5;
@@ -24,6 +30,7 @@ export class OfertasComponent {
   error: boolean = false;
   colorSeleccionado: string = '';
   tallaSeleccionada: string = ''; 
+  subtotalFin: number = 0;
 
   actualizarTotal() {
     const inputCantidad = document.getElementById('numero') as HTMLInputElement;
@@ -54,28 +61,58 @@ export class OfertasComponent {
       stock: this.disponibilidad,
       talla: this.tallaSeleccionada
     };
-
     console.log('Nuevo producto:', nuevoProducto);
-
+    this.setearProdcutosDetalle(nuevoProducto)
     this.productoService.saveProducto(nuevoProducto).subscribe(
-      (response) => {
-        console.log('Producto guardado exitosamente:', response);
-      },
-      (error) => {
-        console.error('Error al guardar el producto:', error);
-      }
+      (response) => {console.log('Producto guardado exitosamente:', response);},
+      (error) => {console.error('Error al guardar el producto:', error);}
     );
-}
+  }
+  anadirAFavoritos() {
 
-
-  aadirAFavoritos() {
-    console.log('Código:', this.codigo);
-    console.log('Nombre:', this.nombre);
-    console.log('Precio:', this.producto.precio);
-    console.log('IVA:', this.producto.iva);
-    console.log('Stock:', this.producto.stock);
-    console.log('Marca:', this.producto.marca);
-    console.log('Peso:', this.producto.peso);
+  }
+  setearProdcutosDetalle(nuevoProducto: Producto){
+    const detalle: DetalleFactura = new DetalleFactura();
+    detalle.setProductos([nuevoProducto]);
+    const productos: Producto[] | undefined = detalle.getProductos();
+    this.detalleService.agregarProductoADetalle(this.codigoDetalle, nuevoProducto).subscribe(
+      (response) => {console.log('Producto agregado Exitosamente a detalle:', response);},
+      (error) => {console.error('Error al agregar el producto:', error);}
+    );
   }
   
+  actualizarSubtotal(): void {
+    this.detalleService.setSubtotalDetalle(this.codigoDetalle, this.total)
+      .subscribe(
+        response => {
+          console.log('Subtotal actualizado correctamente:', response);
+        },
+        error => {console.error('Error al actualizar el subtotal:', error);
+        }
+      );
+  }
+
+  getSubtotalDetalle(){
+    if (this.detalleFactura) {
+      const subtotaldetalle = this.detalleFactura.subtotal || 0;
+      this.subtotalFin = subtotaldetalle + this.total;
+      this.setSubtotalDetalle(this.subtotalFin);
+      console.log('Subtotal:', this.detalleFactura.subtotal);
+    } else {
+      console.error('detalleFactura no está definido o es nulo.');
+    }
+  }
+  
+  setSubtotalDetalle(subtotal: number){
+    this.detalleFactura.setSubtotal(subtotal);
+  }
+
+  productoAgregado: boolean = false;
+
+  agregarAlCarrito() {
+    this.productoAgregado = true;
+    setTimeout(() => {
+      this.productoAgregado = false;
+    }, 2000);
+  }
 }

@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private router: Router) {}
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
 
   selectedOption: string | null = null;
 
@@ -20,10 +22,5 @@ export class HomeComponent {
     this.selectedProduct = product;
   }
 
-  irAUsuario() {
-    this.router.navigate(['paginas/usuarios'], { replaceUrl: true });
-  }
-  irACarrito() {
-    this.router.navigate(['paginas/carrito'], {replaceUrl: true});
-  }
+
 }

@@ -8,11 +8,10 @@ declare var $: any;
   styleUrls: ['./productos.component.scss']
 })
 export class ProductosComponent{
-  constructor(private router: Router){}
+  constructor(private router: Router) {}
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
 
-  IrAlProductoUno() {
-    this.router.navigate(['paginas/odertas'], { replaceUrl: true });
-  }
 }
 
 

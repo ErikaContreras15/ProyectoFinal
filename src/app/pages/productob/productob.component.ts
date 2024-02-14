@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productob',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./productob.component.scss']
 })
 export class ProductobComponent {
+  constructor(private router: Router) {}
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
+
   peso: number = 600;
   codigo: number = 15000150;
   subtotal: number = 20.00;

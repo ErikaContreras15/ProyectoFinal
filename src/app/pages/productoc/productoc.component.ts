@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productoc',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./productoc.component.scss']
 })
 export class ProductocComponent {
+  constructor(private router: Router) {}
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
   peso: number = 200;
   codigo: number = 15251489;
   subtotal: number = 33.60;

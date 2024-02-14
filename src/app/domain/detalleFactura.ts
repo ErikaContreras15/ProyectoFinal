@@ -1,4 +1,5 @@
 import { Factura } from "./factura";
+import { Producto } from "./producto";
 
 import { Usuario } from "./usuario";
 
@@ -10,6 +11,19 @@ export class DetalleFactura {
    
     public usuario?:  Usuario | null;
     public factura?: Factura | null;
+    public productos?: Producto[];
+
+    constructor() {
+        this.productos = [];
+    }
+    
+    public getProductos(): Producto[] | undefined {
+        return this.productos;
+    }
+
+    public setProductos(productos: Producto[]): void {
+        this.productos = productos;
+    }
 
     public get id(): number | undefined {
         return this._id;
@@ -43,19 +57,7 @@ export class DetalleFactura {
         this._subtotal = value;
     }
 
-   /* public get usuario(): Usuario | null | undefined {
-        return this._usuario;
-    }
-
-    public set usuario(value: Usuario | null | undefined) {
-        this._usuario = value;
-    }
-
-    public get factura(): Factura | null | undefined {
-        return this._factura;
-    }
-
-    public set factura(value: Factura | null | undefined) {
-        this._factura = value;
-    }*/
+    public setSubtotal(subtotal: number): void {
+        this._subtotal = subtotal;
+      }
 }

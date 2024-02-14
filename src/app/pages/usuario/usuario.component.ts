@@ -11,7 +11,8 @@ export class UsuarioComponent {
   codeABuscar: number = 0;
   usuario: any = null;
   constructor(private usuarioService: UsuarioService, private router: Router) {}
-
+  irAUsuario() {this.router.navigate(['paginas/usuarios'], { replaceUrl: true });}
+  irACarrito() {this.router.navigate(['paginas/carrito'], {replaceUrl: true});}
   realizarBusqueda(): void {
     this.usuarioService.getUsuarioPorCodigo(this.codeABuscar).subscribe((result: any) => {
       console.log('Datos del usuario recibidos:', result);
