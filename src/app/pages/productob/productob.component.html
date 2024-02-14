@@ -9,116 +9,118 @@
   </div>
   <div class="ecolumn"><button (click)="irAUsuario()" ><img src="assets/icons/user.jpg" alt="Perfil"></button><button><img src="assets/icons/heart.jpg" alt="Perfil"></button><button (click)="irACarrito()" ><img src="assets/icons/carrito.jpg" alt="Perfil"></button></div>
 </div>
-  <!---------------------------------------------BODY---------------------------------------------------->
-  <body>
-    <button (click)="regresar()">← Regresar</button>
-      <div class="container">
-          <div class="column left">
-              <img src="assets/productob.jpg" alt="Imagen">
-          </div>
-          <div class="column center">
-            <div class="talla">
-              <h2>Camiseta lolabum</h2>
-              Talla:
-              <div class="optionsTalla">
-                <select>
-                  <option value="azul">-- Escoje tu talla --</option>
-                  <option value="xs">XS</option>
-                  <option value="s">S</option>
-                  <option value="m">M</option>
-                  <option value="l">L</option>
-                  <option value="xl">XL</option>
-                  <option value="xxl">XXL</option>
-                </select>
-              </div><br>
-              Color:<br>
-              <div class="optionsColor">
-                <select>
-                  <option value="azul">-- Escoje tu color --</option>
-                  <option value="azul">Azul</option>
-                  <option value="negro">Negro</option>
-                  <option value="rojo">Rojo</option>
-                  <option value="verde">Verde</option>
-                  <option value="amarillo">Amarillo</option>
-                  <option value="rosa">Rosa</option>
-                  <option value="naranja">Naranja</option>
-                  <option value="celeste">Celeste</option>
-                  <option value="fuccia">Fuccia</option>
-                  <option value="gris">Gris</option>
-                  <option value="lacre">Lacre</option>
-                  <option value="marron">Marron</option>
-                </select>
-              </div>
-              <p>Disponibilidad: <span id="disponibilidad">50</span></p>
-              <p>Marca: <span id="marca">Squizer</span></p>
-              <p>Peso: <span id="peso">600</span> gr</p>
-              <p>SKU: <span id="sku">15000150</span></p>
-              Cantidad: <input type="number" id="numero" name="numero" (change)="actualizarTotal()">
-              <div *ngIf="error" class="error-box">¡Error! La cantidad es negativa o superior al stock.</div>
+<!---------------------------------------------BODY---------------------------------------------------->
+<body>
+  <button (click)="regresar()">← Regresar</button>
+    <div class="container">
+        <div class="column left">
+            <img src="assets/productob.jpg" alt="Imagen">
+        </div>
+        <div class="column center">
+          <div class="talla">
+            <h2>Camiseta lolabum</h2>
+            Talla:
+            <div class="optionsTalla">  
+              <select [(ngModel)]="tallaSeleccionada">
+                <option value="azul">-- Escoje tu talla --</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+              </select>
+            </div><br>
+            Color:<br>
+            <div class="optionsColor">
+              <select [(ngModel)]="colorSeleccionado">
+                <option value="azul">-- Escoje tu color --</option>
+                <option value="azul">Azul</option>
+                <option value="negro">Negro</option>
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+                <option value="rosa">Rosa</option>
+                <option value="naranja">Naranja</option>
+                <option value="celeste">Celeste</option>
+                <option value="fuccia">Fuccia</option>
+                <option value="gris">Gris</option>
+                <option value="lacre">Lacre</option>
+                <option value="marron">Marron</option>
+              </select>
             </div>
+            <p>Disponibilidad: <span id="disponibilidad">300</span></p>
+            <p>Marca: <span id="marca">Squizer</span></p>
+            <p>Peso: <span id="peso">500</span> gr</p>
+            <p>SKU: <span id="sku">15655269</span></p>
+            Cantidad: <input type="number" id="numero" name="numero" (change)="actualizarTotal()">
+            <div *ngIf="error" class="error-box">¡Error! La cantidad es negativa o superior al stock.</div>
           </div>
-          <div class="column right">
-              <div class="report">
-                <p>Subtotal: $<span id="subtotal">25.50</span></p>
-                <h2><p>Total: $<span id="total">0</span></p></h2>
+        </div>
+        <div class="column right">
+            <div class="report">
+              <p>Subtotal: $<span id="subtotal">20.00</span></p>
+              <h2><p>Total: $<span id="total">0</span></p></h2>
+            </div>
+            Envio Gratis<br>
+            El IVA se agregara directamente a la factura total.
+            <div class="social-icons">
+              <h2><img src="assets/icons/garanty.jpg" alt="garanty" >Entrega garantizada!</h2>
+            </div>
+            <div class="report">
+              <div class="pay-icons">
+                <img src="assets/icons/visa.jpg" alt="Visa" >
+                <img src="assets/icons/paypal.jpg" alt="Paypal" >
+                <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
               </div>
-              Envio Gratis<br>
-              <div class="social-icons">
-                <h2><img src="assets/icons/garanty.jpg" alt="garanty" >Entrega garantizda!</h2>
-              </div>
-              <div class="report">
-                <div class="pay-icons">
-                  <img src="assets/icons/visa.jpg" alt="Visa" >
-                  <img src="assets/icons/paypal.jpg" alt="Paypal" >
-                  <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
-                </div>
-                <button *ngIf="!error">Añadir al carrito</button><br>
-                <button >Añadir a favoritos</button>
-              </div>
-          </div>
+              <button *ngIf="!error" (click)="asignarValoresAProducto()" (click)="agregarAlCarrito()">Añadir al carrito</button><br>
+              <div *ngIf="productoAgregado" class="mensaje-agregado">Agregado correctamente</div>
+              <button (click)="anadirAFavoritos()">Añadir a favoritos</button>
+            </div>
+        </div>
+    </div>
+    <h3>Descripcion del producto</h3>
+    <p>La blusa para mujer en negro de Caterpilat combina estilo y comodidad. Confeccionada en un tejido ligero, esta prenda ofrece una sensación fresca y fluida. Su longitud moderada brinda versatilidad para distintas ocasiones, y al carecer de botones, se presenta con un diseño suave y sin interrupciones. Ideal para crear conjuntos elegantes y cómodos, esta blusa es una opción perfecta para mujeres que buscan un toque de sofisticación sin renunciar a la comodidad.</p>
+    ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</body>
+
+  <!--------------------------------------FOOTER-------------------------------------->
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>CONTACTO</h3>
+      <p>🎧 Atención al cliente 24/7: (+593)987654321</p>
+      <p>Stole es una tienda de ropa online que ofrece una seleccion unica de prendas modernas y elegantes. Con un enfoque en la calidad, moda y comodidad, Stole brinda a sus clientes una experiencia de compra conveniente y estilixada, con envios rápidos y atencion personalizada</p>
+      <div class="social-icons">
+        <img src="assets/icons/facebook.jpg" alt="facebook" >
+        <img src="assets/icons/instagram.jpg" alt="instagram">
+        <img src="assets/icons/youtube.jpg" alt="youtube">
+        <img src="assets/icons/whatsapp.jpg" alt="whatsapp">
+        <img src="assets/icons/tik-tok.jpg" alt="tiktok">
+        <img src="assets/icons/gorjeo.jpg" alt="twitter">
       </div>
-      <h3>Descripcion del producto</h3>
-      <p>La blusa para mujer en negro de Caterpilat combina estilo y comodidad. Confeccionada en un tejido ligero, esta prenda ofrece una sensación fresca y fluida. Su longitud moderada brinda versatilidad para distintas ocasiones, y al carecer de botones, se presenta con un diseño suave y sin interrupciones. Ideal para crear conjuntos elegantes y cómodos, esta blusa es una opción perfecta para mujeres que buscan un toque de sofisticación sin renunciar a la comodidad.</p>
-      ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-  </body>
-  
-    <!--------------------------------------FOOTER-------------------------------------->
-    <footer class="footer">
-      <div class="footer-column">
-        <h3>CONTACTO</h3>
-        <p>🎧 Atención al cliente 24/7: (+593)987654321</p>
-        <p>Stole es una tienda de ropa online que ofrece una seleccion unica de prendas modernas y elegantes. Con un enfoque en la calidad, moda y comodidad, Stole brinda a sus clientes una experiencia de compra conveniente y estilixada, con envios rápidos y atencion personalizada</p>
+    </div>
+    <div class="footer-column">
+      <div class="footer-center">
+        <h3>PREGUNTAS FRECUENTES</h3>
+        <ul>
+          <li><a href="paginas/acercade"><u>¿Qué es STOLE?</u></a></li>
+          <li><u>Centro de ayuda en linea</u></li>
+          <li><u>Política de devolucion de productos</u></li>
+          <li><u>Términos y condiciones</u></li>
+          <li><u>Trabaja con nosotros</u></li>
+          <li><u>Propiedad intelectual</u></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-end">
+        <h3>MÉTODOS DE PAGO</h3>
         <div class="social-icons">
-          <img src="assets/icons/facebook.jpg" alt="facebook" >
-          <img src="assets/icons/instagram.jpg" alt="instagram">
-          <img src="assets/icons/youtube.jpg" alt="youtube">
-          <img src="assets/icons/whatsapp.jpg" alt="whatsapp">
-          <img src="assets/icons/tik-tok.jpg" alt="tiktok">
-          <img src="assets/icons/gorjeo.jpg" alt="twitter">
+          <img src="assets/icons/visa.jpg" alt="Visa" >
+          <img src="assets/icons/paypal.jpg" alt="Paypal" >
+          <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
         </div>
       </div>
-      <div class="footer-column">
-        <div class="footer-center">
-          <h3>PREGUNTAS FRECUENTES</h3>
-          <ul>
-            <li><a href="paginas/acercade"><u>¿Qué es STOLE?</u></a></li>
-            <li><u>Centro de ayuda en linea</u></li>
-            <li><u>Política de devolucion de productos</u></li>
-            <li><u>Términos y condiciones</u></li>
-            <li><u>Trabaja con nosotros</u></li>
-            <li><u>Propiedad intelectual</u></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-column">
-        <div class="footer-end">
-          <h3>MÉTODOS DE PAGO</h3>
-          <div class="social-icons">
-            <img src="assets/icons/visa.jpg" alt="Visa" >
-            <img src="assets/icons/paypal.jpg" alt="Paypal" >
-            <img src="assets/icons/tarjeta.jpg" alt="MasterCard" >
-          </div>
-        </div>
-      </div>
-      <p class="slogan">® 2014 - 2029 - Stole - Todos los derechos reservados - Todas las marcas son propiedad de sus respectivos dueños </p>
-    </footer>
+    </div>
+    <p class="slogan">® 2014 - 2029 - Stole - Todos los derechos reservados - Todas las marcas son propiedad de sus respectivos dueños </p>
+  </footer>

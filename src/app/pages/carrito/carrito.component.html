@@ -34,9 +34,6 @@
       <p>Subtotal: </p>
       <p>IVA (12%):</p>
       <p>Total:</p>
-      <tr *ngFor="let producto of productos">
-        <td>{{ producto.subtotal}}</td>
-      </tr>
       <button class="completar-pago-button" (click)="irAFactura()">Completar Pago</button><br>
       <button class="continuar-comprando-button" (click)="irAtienda()">Continuar Comprando</button>
     </div>

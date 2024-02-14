@@ -20,7 +20,7 @@ export class OfertasComponent {
   codigoDetalle: number = 1;
   peso: number = 1100;
   codigo: number = 12015550;
-  subtotal: number = 25.5;
+  subtotal: number = 44.40;
   iva: number = 0;
   marca: string = "Violantino";
   nombre: string = "Abrigo lijero con bolsillos";
