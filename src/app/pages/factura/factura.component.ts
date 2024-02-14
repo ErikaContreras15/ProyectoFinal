@@ -27,11 +27,7 @@ export class FacturaComponent {
   constructor(private router: Router) {}
 
   guardarFactura() {
-    // Aquí puedes implementar la lógica para guardar la factura
-    // Por ejemplo, puedes enviar los detalles al servidor, mostrar un mensaje de confirmación, etc.
     console.log('Detalles de la factura:', this.detallesPersonales, this.detallesPago);
-
-    // Después de guardar la factura, redirige a la página de usuarios
     this.irAUsuario();
   }
 
