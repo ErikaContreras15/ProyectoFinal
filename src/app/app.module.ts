@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { ProductobComponent } from './pages/productob/productob.component';
 import { ProductocComponent } from './pages/productoc/productoc.component';
 import { ProductodComponent } from './pages/productod/productod.component';
 import { ReporteFacturasComponent } from './pages/reporte-facturas/reporte-facturas.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -45,7 +46,13 @@ import { ReporteFacturasComponent } from './pages/reporte-facturas/reporte-factu
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
