@@ -24,7 +24,7 @@
       <td>{{ producto.marca }}</td>
       <td>{{ producto.precio }}</td>
       <td>
-        <button class="eliminar-button">Eliminar</button>
+        <button class="eliminar-button" (click)="eliminarProductos(producto.codigo)">Eliminar</button>
       </td>
     </tr>
   </table>
