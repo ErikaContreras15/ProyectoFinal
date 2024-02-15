@@ -40,12 +40,12 @@ export class ProductoService {
     return this.http.post(`${environment.WS_PATH}/productos`, producto);
   }*/
   saveProducto(producto: Producto) {
-    console.log('Producto recibido en el servicio:', producto); // Verificar que el objeto producto se reciba correctamente
+    console.log('Producto recibido en el servicio:', producto); // Verifica que el objeto producto se reciba correctamente
 
     let url = environment.WS_PATH + "/productos";
     return this.http.post<any>(url, producto)
         .pipe(
-            tap(response => console.log('Respuesta del servidor:', response)), // Verificar la respuesta del servidor
+            tap(response => console.log('Respuesta del servidor:', response)), // Verifica la respuesta del servidor
             catchError(error => {
                 console.error('Error al guardar el producto:', error);
                 throw error;
