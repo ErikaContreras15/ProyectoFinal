@@ -49,18 +49,12 @@ export class UsuarioService {
   }
 
   private baseUrl = 'http://localhost:8080/ProyectoFinal/rs/usuarios';
-  verificarUsuario(username: string, password: string): Observable<any> {
-    const url = `${this.baseUrl}/userbyuserandpass/${username}&${password}`;
-  
-    // Configurar cabeceras HTTP si es necesario
+  verificarUsuario(username: string): Observable<any> {
+    const url = `${this.baseUrl}/userbyuser/${username}`;
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-  
-    // Cuerpo de la solicitud
-    const body = { username, password };
-  
-    // Realizar la solicitud POST al backend
+    const body = { username};
     return this.http.post<any>(url, body, { headers }).pipe(
-      catchError(this.handleError) // Manejar errores si los hay
+      catchError(this.handleError)
     );
   }
   

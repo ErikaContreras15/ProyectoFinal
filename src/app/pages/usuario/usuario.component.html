@@ -10,11 +10,14 @@
   <div class="column"><button (click)="irAUsuario()" ><img src="assets/icons/user.jpg" alt="Perfil"></button><button><img src="assets/icons/heart.jpg" alt="Perfil"></button><button (click)="irACarrito()" ><img src="assets/icons/carrito.jpg" alt="Perfil"></button></div>
 </div>
 <!--------------------------------------BODY-------------------------------------->
+
 <div class="container">
   <div class="buscar-container">
     <label for="codeABuscar">Ingrese el codigo:</label>
     <input type="text" id="codeABuscar" name="codeABuscar" [(ngModel)]="codeABuscar"/>
-    <button (click)="realizarBusqueda()">Buscar Usuario</button>
+    <button (click)="realizarBusqueda()">Buscar Usuario</button><br>  
+    <button (click)="irAReporte()">Ver Registro de compras</button><br>
+    <button (click)="irALogIn()">Log Out</button><br>  
   </div>
 
   <div class="tabla-container" *ngIf="usuario">
@@ -37,11 +40,11 @@
             <td>{{ usuario.correo }}</td>
             <td>{{ usuario.contrasena }}</td>
           </tr>
-          
       </tbody>
     </table>
   </div>
 </div>
+
 <!--------------------------------------FOOTER-------------------------------------->
 <footer class="footer">
   <div class="footer-column">
