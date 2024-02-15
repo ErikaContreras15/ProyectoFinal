@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environments';
 import { Pago } from '../domain/pago';
-import { catchError } from 'rxjs';
+import { catchError, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +35,19 @@ export class PagoService {
           throw error;
         })
       );
+  }
+
+  savePago(pago: Pago) {
+    console.log('Pago recibido en el servicio:', pago); // Verificar que el objeto producto se reciba correctamente
+
+    let url = environment.WS_PATH + "/pagos";
+    return this.http.post<any>(url, pago)
+        .pipe(
+            tap(response => console.log('Respuesta del servidor:', response)), // Verificar la respuesta del servidor
+            catchError(error => {
+                console.error('Error al guardar el producto:', error);
+                throw error;
+            })
+        );
   }
 }

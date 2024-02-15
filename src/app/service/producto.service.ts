@@ -51,7 +51,7 @@ export class ProductoService {
                 throw error;
             })
         );
-}
+  }
   
   
 }

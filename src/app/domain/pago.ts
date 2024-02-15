@@ -1,8 +1,8 @@
 export class Pago {
     public _codigo?: number;
     public _metodo?: string;
-    public _numero?: number;
-    public _fecha?: Date;
+    public _numero?: string;
+    public _fecha?: string;
     public _cvv?: string;
 
 
@@ -22,19 +22,19 @@ export class Pago {
         this._metodo = value;
     }
 
-    public get numero(): number | undefined {
+    public get numero(): string | undefined {
         return this._numero;
     }
 
-    public set numero(value: number | undefined) {
+    public set numero(value: string | undefined) {
         this._numero = value;
     }
 
-    public get fecha(): Date | undefined {
+    public get fecha(): string | undefined {
         return this._fecha;
     }
 
-    public set fecha(value: Date | undefined) {
+    public set fecha(value: string | undefined) {
         this._fecha = value;
     }
 

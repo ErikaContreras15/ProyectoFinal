@@ -5,6 +5,7 @@ export class Cliente {
     public _ciudad?: string;
     public _correo?: string;
     public _telefono?: string;
+    public _cedula?: string;
 
   
       public get codigo(): number | undefined {
@@ -22,6 +23,14 @@ export class Cliente {
       public set nombre(value: string | undefined) {
           this._nombre = value;
       }
+
+      public get cedula(): string | undefined {
+        return this._cedula;
+    }
+
+    public set cedula(value: string | undefined) {
+        this._cedula = value;
+    }
   
       public get direccion(): string | undefined {
           return this._direccion;

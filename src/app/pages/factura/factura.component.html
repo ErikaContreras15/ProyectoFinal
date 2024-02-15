@@ -15,12 +15,11 @@
     <div class="column">
             <h3>Detalles Personales</h3>
             <label for="nombreComprador">Nombre Completo:</label>
-            <input type="text" id="nombreComprador" name="nombreComprador" required [(ngModel)]="detallesPersonales.nombreCompleto">
+            <input type="text" id="nombreComprador" name="nombreComprador" required [(ngModel)]="nombreCompleto">
             <label for="cedula">Cédula:</label>
-            <input type="text" id="cedula" name="cedula" required [(ngModel)]="detallesPersonales.cedula">
+            <input type="text" id="cedula" name="cedula" required [(ngModel)]="cedula">
             <label for="Ciudad">Ciudad:</label>
-            <select id="Ciudad" name="Ciudad" [(ngModel)]="detallesPersonales.ciudad">
-                <option value="blank">-Elija su ciudad-</option>
+            <select id="Ciudad" name="Ciudad" [(ngModel)]="ciudad">
                 <option value="cuenca">Cuenca</option>
                 <option value="quito">Quito</option>
                 <option value="guayaquill">Guayaquil</option>
@@ -31,48 +30,52 @@
                 <option value="sucumbios">Sucumbios</option>
             </select>
             <label for="Direccion">Dirección:</label>
-            <input type="text" id="Direccion" name="Direccion" required [(ngModel)]="detallesPersonales.direccion"> 
+            <input type="text" id="Direccion" name="Direccion" required [(ngModel)]="direccion"> 
             <label for="correoelectronico">Correo Electrónico:</label>
-            <input type="email" id="correoelectronico" name="correoelectronico" placeholder="example@example.com" required [(ngModel)]="detallesPersonales.correoElectronico">
+            <input type="email" id="correoelectronico" name="correoelectronico" placeholder="example@example.com" required [(ngModel)]="correoElectronico">
             <label for="celular">Numero de teléfono:</label>
-            <input type="tel" id="celular" name="celular" required [(ngModel)]="detallesPersonales.numeroTelefono">
+            <input type="tel" id="celular" name="celular" required [(ngModel)]="numeroTelefono">
         </div>
         <div class="column">
             <h3>Detalles del Pago</h3>
             <label for="metodoPago">Método de Pago:</label>
-            <select id="metodoPago" name="metodoPago" [(ngModel)]="detallesPago.metodoPago">
-                <option value="blank">-Elija su opcion de pago-</option>
+            <select id="metodoPago" name="metodoPago" [(ngModel)]="metodoPago">
                 <option value="visa">VISA</option>
                 <option value="mastercard">MasterCard</option>
                 <option value="paypal">PayPal</option>
                 <option value="debito">Debito</option>
             </select>
             <label for="numeroTarjeta">Número de Tarjeta:</label>
-            <input type="text" id="numeroTarjeta" name="numeroTarjeta" required [(ngModel)]="detallesPago.numeroTarjeta">
+            <input type="text" id="numeroTarjeta" name="numeroTarjeta" required [(ngModel)]="numeroTarjeta">
             <label for="fechaVencimiento">Fecha de Vencimiento:</label>
-            <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/YY" required [(ngModel)]="detallesPago.fechaVencimiento">
+            <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/YY" required [(ngModel)]="fechaVencimiento">
             <label for="cvv">CVV/CVC:</label>
-            <input type="text" id="cvv" name="cvv" required [(ngModel)]="detallesPago.cvv">
+            <input type="text" id="cvv" name="cvv" required [(ngModel)]="cvv">
         
     </div>
     <div class="column">
-      <h3>Resumen de Compra</h3>
-      <p>Subtotal: $100.00</p>
-      <p>IVA (16%): $16.00</p>
-      <p>Total: $116.00</p>
+      <table>
+        <tr *ngFor="let prod of facturas">
+          <p><td>Subtotal: {{ prod.subtotal }}</td></p>
+          <p><td>IVA (12%): {{ prod.iva }}</td></p>
+          <p><td>Total: {{ prod.total }}</td></p>
+        </tr>
+      </table>
     </div>
   </div>
   <div class="terminos-container">
-    <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" required>
+    <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" [(ngModel)]="aceptoTerminos" required>
     <label for="aceptoTerminos">Acepto los términos y condiciones</label>
   </div>
   <div class="botones-container">
-    <button class="confirmar-pago">Confirmar Pago</button>
-    <button class="regresar">Regresar</button>
+    <button *ngIf="!error" class="confirmar-pago" (click)="asignarValoresaCliente()" (click)="agregarAlCarrito()" [disabled]="!aceptoTerminos">Confirmar Pago</button><br>
+    <div *ngIf="productoAgregado" class="mensaje-agregado">La compra se realizó correctamente</div>
+    <button class="regresar" (click)="regresar()">Regresar</button>
     <br>
     <br>
     <br>  
   </div>
+  
 
 
    <!--------------------------------------FOOTER-------------------------------------->

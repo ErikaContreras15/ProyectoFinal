@@ -44,7 +44,7 @@
       padding: 10px;
       //border: 1px solid #ccc;
       border-radius: 5px;
-      background: linear-gradient(to right, #b3b3b3 0%, #ffffff 50%, #b3b3b3 100%);
+      background: linear-gradient(to right, #b8b8b8 0%, #ffffff 50%, #b8b8b8 100%);
       p {margin: 5px 0;}
     }
   }
@@ -69,6 +69,8 @@
   }
   .eliminar-button:hover {background-color: rgb(2, 1, 100);}
   .Title-body{text-align: center;}
+  table {margin: 0 auto;}
+
 
     //-------------------------------------------------Footer------------------------------------------------
     .footer {background-color: #000000;color: #ffffff;padding: 20px;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;

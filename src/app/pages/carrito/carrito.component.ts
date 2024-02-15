@@ -11,13 +11,18 @@ import { CarritoService } from 'src/app/service/carrito.service';
 })
 export class CarritoComponent {
   productos: any;
+  valores: any;
   product: Producto = new Producto();
+  values: DetalleFactura = new DetalleFactura();
   detalles: DetalleFactura[] = [];
+  value: DetalleFactura[] = [];
+
   
   constructor(private router: Router, private carritoService: CarritoService) {}
 
   ngOnInit(): void {
     this.obtenerDetallesCarrito();
+    this.obtenerValoresCarrito();
     this.productos = this.carritoService.obtenerDetallesCarrito();
     this.obtenerProductosPorDetalle();
   }
@@ -37,6 +42,17 @@ export class CarritoComponent {
     );
   }
 
+  obtenerValoresCarrito(): void {
+    this.carritoService.obtenerValoresCarrito().subscribe(
+      (detalles: DetalleFactura[]) => {
+        this.detalles = detalles;
+      },
+      (error) => {
+        console.error('Error al obtener valores del carrito:', error);
+      }
+    );
+  }
+
   eliminarProductos(codigo: number): void {
     if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
       this.carritoService.dropCarrito(codigo).subscribe(data => {
@@ -51,7 +67,4 @@ export class CarritoComponent {
       this.productos = data;
     });
   }
-
-  
-
 }

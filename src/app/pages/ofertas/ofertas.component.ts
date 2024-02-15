@@ -68,6 +68,8 @@ export class OfertasComponent {
       (error) => {console.error('Error al guardar el producto:', error);}
     );
   }
+
+  
   anadirAFavoritos() {
 
   }
@@ -109,10 +111,7 @@ export class OfertasComponent {
 
   productoAgregado: boolean = false;
 
-  agregarAlCarrito() {
-    this.productoAgregado = true;
-    setTimeout(() => {
-      this.productoAgregado = false;
-    }, 2000);
+  agregarAlCarrito() {this.productoAgregado = true;
+    setTimeout(() => {this.productoAgregado = false;}, 2000);
   }
 }

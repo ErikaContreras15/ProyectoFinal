@@ -1,3 +1,4 @@
+import { Cliente } from "./cliente";
 import { DetalleFactura } from "./detalleFactura";
 import { Pago } from "./pago";
 export class Factura {
@@ -7,9 +8,22 @@ export class Factura {
     public _iva?: number;
     public _total?: number;
 
-    public pago?: Pago;
+    public pago?: Pago[];
     public detalles?: DetalleFactura[];
+    public clientes?: Cliente[];
 
+    public getClientes(): Cliente[] | undefined {
+        return this.clientes;
+    }
+    public setClientes(clientes: Cliente[]): void {
+        this.clientes = clientes;
+    }
+    public getPagos(): Pago[] | undefined {
+        return this.pago;
+    }
+    public setPagos(pagos: Pago[]): void {
+        this.pago = pagos;
+    }
 
     public get id(): number | undefined {
         return this._id;

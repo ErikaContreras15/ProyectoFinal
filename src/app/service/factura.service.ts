@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environments';
 import { Factura } from '../domain/factura';
-import { catchError } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +36,16 @@ export class FacturaService {
         })
       );
   }
+  private apiUrl2 = 'http://localhost:8080/ProyectoFinal/rs/facturas/list';
+  obtenerValoresCarrito(): Observable<Factura[]> {
+    return this.http.get<Factura[]>(this.apiUrl2);
+  }
 
+  private apiUrl = 'http://localhost:8080/ProyectoFinal/rs/facturas';
+  agregarClienteAFactura(codigoFactura: number, cliente: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/agregarCliente?codigoFactura=${codigoFactura}`, cliente);
+  }
+  agregarPagoAFactura(codigoFactura: number, pago: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/agregarPago?codigoFactura=${codigoFactura}`, pago);
+  }
 }

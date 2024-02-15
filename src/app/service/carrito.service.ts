@@ -10,12 +10,19 @@ import { environment } from 'src/environments/environments';
 })
 export class CarritoService {
   private apiUrl = 'http://localhost:8080/ProyectoFinal/rs/detalles/productos/1';
+  private apiUrl2 = 'http://localhost:8080/ProyectoFinal/rs/detalles/list';
+  
 
   constructor(private http: HttpClient) { }
 
   obtenerDetallesCarrito(): Observable<DetalleFactura[]> {
     return this.http.get<DetalleFactura[]>(this.apiUrl);
   }
+
+  obtenerValoresCarrito(): Observable<DetalleFactura[]> {
+    return this.http.get<DetalleFactura[]>(this.apiUrl2);
+  }
+
   dropCarrito(codigo: number){
     let url = environment.WS_PATH + "/detalles/productos/" + codigo;
     console.log("URL del servicio web para eliminar:", url);
@@ -30,4 +37,5 @@ export class CarritoService {
   getProductosPorDetalle(codigoDetalle: number): Observable<any[]> {
     return this.http.get<any[]>(`http://localhost:8080/ProyectoFinal/rs/detalles/productos/${codigoDetalle}`);
   }
+  
 }

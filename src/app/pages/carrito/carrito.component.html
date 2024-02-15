@@ -17,7 +17,7 @@
       <th>Nombre</th>
       <th>Marca</th>
       <th>Precio</th>
-  </tr>
+    </tr>
     <tr *ngFor="let producto of productos">
       <td>{{ producto.codigo }}</td>
       <td>{{ producto.nombre }}</td>
@@ -29,18 +29,22 @@
     </tr>
   </table>
   <div class="completar-pago-section">
-    <div class="reporte">
-      <h3>Resumen de compra</h3>
-      <p>Subtotal: </p>
-      <p>IVA (12%):</p>
-      <p>Total:</p>
-      <button class="completar-pago-button" (click)="irAFactura()">Completar Pago</button><br>
-      <button class="continuar-comprando-button" (click)="irAtienda()">Continuar Comprando</button>
+    <div class="reporte-container">
+      <div class="reporte">
+        <h3>Resumen de compra</h3>
+        <table>
+          <tr *ngFor="let prod of detalles">
+            <p><td>Subtotal: {{ prod.subtotal }}</td></p>
+            <p><td>IVA (12%): {{ prod.cantidad }}</td></p>
+            <p><td>Total: {{ prod.precio }}</td></p>
+          </tr>
+        </table>
+        <button class="completar-pago-button" (click)="irAFactura()">Completar Pago</button><br>
+        <button class="continuar-comprando-button" (click)="irAtienda()">Continuar Comprando</button>
+      </div>
     </div>
-    <br>
   </div>
-
-
+  <br>
   <!--------------------------------------FOOTER-------------------------------------->
   <footer class="footer">
     <div class="footer-column">
