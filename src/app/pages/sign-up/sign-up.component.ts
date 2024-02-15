@@ -11,19 +11,24 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 export class SignUpComponent {
   constructor(private router: Router, private usuariosServices: UsuarioService) {}
   
-  usuarios: any
-  user: Usuario = new Usuario()  
+  usuarios: any;
+  user: Usuario = new Usuario();
 
-  ngOnInit(): void {this.usuarios = this.usuariosServices.getUsuarios()}
+  ngOnInit(): void {
+    this.usuarios = this.usuariosServices.getUsuarios();
+  }
  
   irAIniciarSesion() {
     this.router.navigate(['paginas/login'], { replaceUrl: true });
   }
-  guardar(){
+
+  guardar() {
+    console.log("Usuario a guardar:", this.user);
     this.usuariosServices.saveUsuario(this.user).subscribe(data => {
-      console.log(data)
-      this.ngOnInit()
-    })
+      console.log("Respuesta del servidor:", data);
+      this.ngOnInit();
+    });
     this.irAIniciarSesion();
   }
+  
 }

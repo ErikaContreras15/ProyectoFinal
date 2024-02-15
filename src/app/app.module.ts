@@ -18,6 +18,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductobComponent } from './pages/productob/productob.component';
 import { ProductocComponent } from './pages/productoc/productoc.component';
 import { ProductodComponent } from './pages/productod/productod.component';
+import { ReporteFacturasComponent } from './pages/reporte-facturas/reporte-facturas.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ProductodComponent } from './pages/productod/productod.component';
     ProductobComponent,
     ProductocComponent,
     ProductodComponent,
+    ReporteFacturasComponent,
 
   ],
   imports: [

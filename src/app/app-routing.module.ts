@@ -14,6 +14,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductobComponent } from './pages/productob/productob.component';
 import { ProductocComponent } from './pages/productoc/productoc.component';
 import { ProductodComponent } from './pages/productod/productod.component';
+import { ReporteFacturasComponent } from './pages/reporte-facturas/reporte-facturas.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/Inicio', pathMatch: 'full' },
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'paginas/productob', component: ProductobComponent },
   {path: 'paginas/productoc', component: ProductocComponent },
   {path: 'paginas/productod', component: ProductodComponent },
+  {path: 'paginas/reporte', component: ReporteFacturasComponent },
 ];
 
 @NgModule({
